@@ -2,6 +2,7 @@ import './App.css';
 import Offer from './components/offers';
 import useApi, { useState } from './hooks/useApi';
 import OfferList from './components/singleoffer';
+import Jobadds from './components/offer_news'
 
 function App() {
 
@@ -38,7 +39,7 @@ function App() {
           
           {/* Stellenangebote */}
           <div className="App__Stellenangebote">
-          <div><Offer /></div>
+          <div><Jobadds /></div>
           <div>Beispiel Feld 2</div>
           <div>Beispiel Feld 3</div>
           </div>
