@@ -1,6 +1,11 @@
 import './App.css';
+import Offer from './components/offers';
+import useApi, { useState } from './hooks/useApi';
+import OfferList from './components/singleoffer';
 
 function App() {
+
+
   return (
     <div className="App">
       <header className="App__Header">        
@@ -33,7 +38,7 @@ function App() {
           
           {/* Stellenangebote */}
           <div className="App__Stellenangebote">
-          <div>Beispiel Feld 1</div>
+          <div><Offer /></div>
           <div>Beispiel Feld 2</div>
           <div>Beispiel Feld 3</div>
           </div>
