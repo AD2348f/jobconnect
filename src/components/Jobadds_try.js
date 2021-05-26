@@ -1,12 +1,10 @@
+import UseApi from './UseApi'
 
-import {useState, useEffect} from "react";
-import React from "react";
-
-const Jobadds = ({data, loader}) => {
-console.log(data)
-  return (
+const [data] = UseApi();
+const Jobaddstry = () => {
+return (
     <>
-      {loader ? "loading!" :  
+       
           <div>   
              <div>             
               {data.map((e, index) => (
@@ -25,9 +23,9 @@ console.log(data)
               ))}
             </div>            
           </div>     
-    }   
+       
     </>
-  );
- };
+  )};
+ 
 
-export default Jobadds;
+export default Jobaddstry;
