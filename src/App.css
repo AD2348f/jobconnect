@@ -42,7 +42,7 @@ div {
 }
 
 /* Main Section */
-main {
+.App__Main--wrapper {
   display: flex;
   justify-content: space-between;
   margin-top: 5rem;

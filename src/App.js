@@ -1,55 +1,40 @@
 import './App.css';
-import Offer from './components/offers';
-import useApi, { useState } from './hooks/useApi';
-import OfferList from './components/singleoffer';
-import Jobadds from './components/offer_news'
+
+import SidebarLeft from './components/SidebarLeft';
+import Singlejobadd from './components/Singlejobadd';
+import Jobadds from './components/Jobadds';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Searchfield from './components/Searchfield';
+
+
+
+
+import { Link, Route, Switch } from "react-router-dom";
 
 function App() {
-
-
   return (
     <div className="App">
-      <header className="App__Header">        
-        <h3>header</h3>
-        <img></img>
-        <nav>
-          <ul className="App__Navigation">
-            <li>Für Arbeitgeber</li>
-            <li>Vorgemerkt</li>
-            <li>Mein Profil</li>
-          </ul>
-        </nav>
-      </header>
-      <main className="App__Main">
-        {/* Sidebar links */}
-        <div className="App__Sidebar-links">
-          <div>Seiten Feld 1</div>
-          <div>Seiten Feld 2</div>
-          <div>Seiten Feld 3</div>
-        </div>
-        {/* Suchfeld */}
-        <div className="App__Mittelteil">
-          <div className="App__Suchfelder-wrapper">
-          <form className="App__Searchfield" action="">
-            <input type="text"></input>
-            <input type="text"></input>
-            <button>Suchen</button>
-          </form>
-          </div>
-          
-          {/* Stellenangebote */}
-          <div className="App__Stellenangebote">
-          <div><Jobadds /></div>
-          <div>Beispiel Feld 2</div>
-          <div>Beispiel Feld 3</div>
-          </div>
-        </div>
-      </main>
-      <footer className="App__Footer">
-        <div>Über uns</div>
-        <div>AGB / Datenschutz</div>  
-        <div>Social Media</div>
-      </footer>
+      <Header />
+      <Searchfield />    
+      <div className="App__Main--wrapper">
+      <SidebarLeft />
+      <Link to="/">Home</Link>{" "}
+              <Link to="/Message/:id">Message</Link>{" "}
+              <Switch>
+                <div>
+                <Route exact path="/message/:id">               
+                    <Singlejobadd />
+                    
+                  </Route>
+                  <Route exact path="/">
+                   <Jobadds />
+                  </Route>                
+                </div>
+              </Switch>
+      
+      </div> 
+      <Footer />                  
     </div>
   );
 }

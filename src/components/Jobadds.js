@@ -13,7 +13,7 @@ const Jobadds = () => {
   const fetchData = async() => {
     setLoader(true);
     await Axios.get(url)
-    .then((response) => setData([response.data]))
+    .then((response) => setData(response.data.data))
     .catch((error) => console.log(error));
     setLoader(false)
   }
@@ -26,17 +26,18 @@ const Jobadds = () => {
               {data.map((e, index) => (
                 <>  
                 <div key={index}>
-                  <h3>{e.add_title}</h3>
-                  <p>{e.add_desc}</p>
-                  {/* <p className="desc">{e.description}</p>
-                  <p>Tags: {e.tag_id[0].name}</p>
-                  <p> Stars : {e.stars}</p>
-                  <button className="btnMore">More</button> */}
-                  </div>
+                  <h3>{e.addTitle}</h3>
+                  <p>{e.addDesc} <button>read more</button> </p> 
+                  <p>Company: {e.addComp}</p> 
+                  <p>Location: {e.addLocation}</p>
+                  <p>Techstack: {e.addTech}</p>
+                  <p>Posted on: {e.addDate}</p>
+                  <p>Worktime: {e.addWrkt}</p> 
+                  <p>Contract type: {e.addContr}</p>                                
+                </div>
                 </>                
               ))}
-            </div>
-            {data.add_desc}
+            </div>            
           </div>     
     }   
     </>
