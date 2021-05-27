@@ -17,10 +17,10 @@ function App() {
       <div className="App__Main--wrapper">
       <SidebarLeft />
       <Link to="/">Home</Link>{" "}
-              <Link to="/Message/:id">Message</Link>{" "}
+              <Link to="/jobadd/:id">Message</Link>{" "}
               <Switch>
                 <div>
-                <Route exact path="/message/:id">               
+                <Route exact path="/jobadd/:id">               
                     <Singlejobadd />                    
                   </Route>
                   <Route exact path="/">
