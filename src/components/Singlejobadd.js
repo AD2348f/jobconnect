@@ -13,7 +13,7 @@ const { id } = useParams();
 
 const [jobadd, setJobAdd] = useState([]);
 const [loader, setLoader] = useState(false);
-const url = "http://localhost:5000/jobadds";
+const url = "https://jobconnect-try.herokuapp.com/jobadds";
 
 useEffect(() => { fetchJobAdd();
     }, []);

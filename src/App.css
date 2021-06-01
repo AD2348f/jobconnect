@@ -1,5 +1,7 @@
 .App {
-  text-align: center;
+  text-align: center; 
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 div {
@@ -39,20 +41,21 @@ div {
 
 .App__Navigation li {
   margin: 1rem;
-}
+} 
 
 /* Main Section */
 .App__Main--wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 5rem;
   margin-bottom: 10rem;
   background-color: rgb(171, 166, 175);
 }
 
 .App__Sidebar-links {
-  margin-left: 10rem;
+  /* margin-left: 10rem; */
   min-width: 20rem;
+  
 }
 
 .App__Mittelteil {

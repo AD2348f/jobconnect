@@ -48,7 +48,7 @@ const CreateAdd = () => {
   };
 
   return (
-    <>
+    <div>
       <input
         type="text"
         name="addTitle"
@@ -74,7 +74,7 @@ const CreateAdd = () => {
         placeholder="Which benefits can your company offer for this role?"
       /><br /><br />
       <button onClick={submitAd}>Create Ad</button>
-    </>
+    </div>
   )
 }
 

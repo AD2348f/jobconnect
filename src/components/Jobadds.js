@@ -2,6 +2,7 @@ import {useState, useEffect} from "react";
 import { Link } from 'react-router-dom';
 import React from "react";
 import useApi from '../hooks/useApi';
+import Card from 'react-bootstrap/Card'
 
 const Jobadds = () => {
  
@@ -11,15 +12,35 @@ const [jobadds] = useApi();
     <div className='App'>
       
         {jobadds.map((jobadd) => (
-          <div key={jobadd._id}>
-            <h3>{jobadd.addTitle}</h3>
-            <p>{jobadd.addLocation}</p>
-            <p>{jobadd.addDesc}</p>
-            <p>{jobadd.addTech}</p>  
-            <Link to={`/jobadd/${jobadd._id}`}>Message</Link>{" "}          
-         </div>
-        ))}      
+         
+            
+               
+            <Card key={jobadd._id} style={{ width: '90rem' }}>
+  <Card.Body>
+    <Card.Title>{jobadd.addTitle}</Card.Title>
+    <Card.Subtitle className="mb-2 text-muted">{jobadd.addLocation}</Card.Subtitle>
+    <Card.Text>
+    {jobadd.addDesc}    
+    </Card.Text>
+    <Card.Text>
+    {jobadd.addTech}
+    </Card.Text>
+    <Card.Link href="#"><Link to={`/jobadd/${jobadd._id}`}>Read more</Link>{" "}</Card.Link>    
+  </Card.Body>
+</Card>      
+        
+        ))}   
+
+
+
+
+
     </div>
+
+
+
+
+
   );
  };
 

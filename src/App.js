@@ -4,10 +4,10 @@ import Singlejobadd from './components/Singlejobadd';
 import Jobadds from './components/Jobadds';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Login from './components/Login';
 import Searchfield from './components/Searchfield';
 import { Link, Route, Switch } from "react-router-dom";
 import CreateAdd from './components/Createadd';
-
 
 
 function App() {  
@@ -16,14 +16,9 @@ function App() {
       <Header />
       <Searchfield />       
       <div className="App__Main--wrapper">
-        <SidebarLeft />
-        <Link to="/">Home</Link>
-          <Link to="/createadd">Create ad</Link>
-
-        {/* <Link to="/jobadd/:id">Message</Link>{" "}
-        <Link to="/createadd">createadd</Link>{" "} */}
+      <SidebarLeft />
         <Switch>
-          <div>
+          <div className="justify-content-center">
             <Route exact path="/jobadd/:id">               
               <Singlejobadd />                    
             </Route>
@@ -32,7 +27,11 @@ function App() {
             </Route>
             <Route exact path="/createadd">
              <CreateAdd />
-            </Route> 
+            </Route>
+            <Route exact path="/Login">
+             <Login />
+            </Route>
+             
           </div>
         </Switch>      
       </div> 
