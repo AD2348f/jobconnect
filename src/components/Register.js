@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button'
 import Nav from 'react-bootstrap/Nav'
 import Card from 'react-bootstrap/Card'
 
-const Login = () => {
+const Register = () => {
     return (        
         <Card style={{ width: '90rem' }}>
           <Card.Body>
@@ -22,25 +22,23 @@ const Login = () => {
 
             <Form>
             <Form.Group controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
+                <Form.Label>Enter your E-Mail adress</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />
                 <Form.Text className="text-muted">
-                Enter your E-Mail adress
+                
                 </Form.Text>
             </Form.Group>
 
             <Form.Group controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
+                <Form.Label>Choose a Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" />
             </Form.Group>
-            <Form.Group controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Remember me" />
-            </Form.Group>
+            
             <Button variant="primary" type="submit">
                 Submit
             </Button>
             <Button variant="primary" type="submit">
-                Register
+                Login
             </Button>
             </Form>
             </Card.Body>
@@ -48,4 +46,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Register

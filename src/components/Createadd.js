@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-
 import useFormData from '../hooks/useForm';
+import Card from 'react-bootstrap/Card'
 
 const initialFormData = {
   addTitle: '',
@@ -49,7 +49,14 @@ const CreateAdd = () => {
 
   return (
     <div>
-      <input
+      
+
+      <Card style={{ width: '90rem' }}>
+          <Card.Body>
+            <Card.Title>Create a jobad</Card.Title>
+            
+            <Card.Text>
+            <input
         type="text"
         name="addTitle"
         onChange={handleChange}
@@ -74,7 +81,11 @@ const CreateAdd = () => {
         placeholder="Which benefits can your company offer for this role?"
       /><br /><br />
       <button onClick={submitAd}>Create Ad</button>
+            </Card.Text>               
+          </Card.Body>
+      </Card>
     </div>
+    
   )
 }
 

@@ -6,7 +6,9 @@ const Searchfield = () => {
            <div className="justify-content-center">
           <form className="App__Searchfield" action="">            
             <input type="text" placeholder="search"></input>
-            <button>Suchen</button>
+            <button>Find Jobs</button>
+            <input type="text" placeholder="search"></input>
+            <button>Add a Location</button>
           </form>
           </div> 
         

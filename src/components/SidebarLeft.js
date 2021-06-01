@@ -37,6 +37,7 @@ const sidebarLeft = () => {
     </Col>
   </Form.Row>
 </Form>
+
 <Form>
   <Form.Row className="align-items-center">
     <Col xs="auto" className="my-1">
@@ -72,6 +73,7 @@ const sidebarLeft = () => {
     </Col>
   </Form.Row>
 </Form>
+
 <Form>
   <Form.Row className="align-items-center">
     <Col xs="auto" className="my-1">

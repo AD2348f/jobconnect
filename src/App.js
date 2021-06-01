@@ -1,13 +1,18 @@
 import './App.css';
-import SidebarLeft from './components/SidebarLeft';
 import Singlejobadd from './components/Singlejobadd';
 import Jobadds from './components/Jobadds';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Login from './components/Login';
+import Blog from './components/Blog';
+import Register from './components/Register';
 import Searchfield from './components/Searchfield';
 import { Link, Route, Switch } from "react-router-dom";
 import CreateAdd from './components/Createadd';
+import AboutUs from './components/AboutUs';
+import LegalInfo from './components/LegalInfo';
+import GDPR from './components/GDPR';
+
 
 
 function App() {  
@@ -15,8 +20,7 @@ function App() {
     <div className="App">
       <Header />
       <Searchfield />       
-      <div className="App__Main--wrapper">
-      <SidebarLeft />
+      <div className="App__Main--wrapper">      
         <Switch>
           <div className="justify-content-center">
             <Route exact path="/jobadd/:id">               
@@ -31,7 +35,21 @@ function App() {
             <Route exact path="/Login">
              <Login />
             </Route>
-             
+            <Route exact path="/Register">
+             <Register />
+            </Route>
+            <Route exact path="/Blog">
+             <Blog />
+            </Route>
+            <Route exact path="/AboutUs">
+             <AboutUs />
+            </Route>
+            <Route exact path="/LegalInfo">
+             <LegalInfo />
+            </Route>
+            <Route exact path="/GDPR">
+             <GDPR />
+            </Route>
           </div>
         </Switch>      
       </div> 

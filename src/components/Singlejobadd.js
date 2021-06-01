@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
 import { useParams } from 'react-router-dom';
-import useApi from '../hooks/useApi';
+import Card from 'react-bootstrap/Card'
 
 
 
@@ -29,17 +29,23 @@ const fetchJobAdd = async() => {
 console.log(jobadd)
 
   return (
-    <div className="App__Singleoffer">          
-        <div>        
-              <div className='App'>
-                  <h3>{jobadd.addTitle}</h3>
-                  <p>{jobadd.addLocation}</p>
-                  <p>{jobadd.addFull}</p>
-                  <p>{jobadd.addTech}</p>   
-            </div>           
-        </div>
+    <div className="App__Singleoffer">                  
+      <Card key={jobadd._id} style={{ width: '90rem' }}>
+          <Card.Body>
+            <Card.Title>{jobadd.addTitle}</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">{jobadd.addLocation}</Card.Subtitle>
+            <Card.Text>
+            {jobadd.addFull}    
+            </Card.Text>
+            <Card.Text>
+            {jobadd.addTech}
+            </Card.Text>               
+          </Card.Body>
+      </Card>  
     </div>
       )  
 }
+
+
 
 export default Singlejobadd;

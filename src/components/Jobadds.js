@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import React from "react";
 import useApi from '../hooks/useApi';
 import Card from 'react-bootstrap/Card'
+import SidebarLeft from '../components/SidebarLeft';
 
 const Jobadds = () => {
  
@@ -10,7 +11,7 @@ const [jobadds] = useApi();
   return (
   
     <div className='App'>
-      
+      <SidebarLeft />
         {jobadds.map((jobadd) => (
          
             
