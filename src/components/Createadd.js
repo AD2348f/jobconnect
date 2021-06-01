@@ -32,6 +32,8 @@ const CreateAdd = () => {
       addTitle,
       addLocation,
       addDesc,
+      addContr: 'permanent',
+      addWrkt: 'full-time',
       addFull: [
         benefitsDesc,
         companyDesc,
@@ -42,10 +44,12 @@ const CreateAdd = () => {
     }
 
     axios
-      .post("https://jobconnect-try.herokuapp.com/jobadds", newAd)
+      .post("http://localhost:5000/jobadds", newAd)     
       .then((res) => setStatus('successfully created'))
       .catch((err) => setStatus('something went wrong'))
   };
+  // http://localhost:5000/
+  // https://jobconnect-try.herokuapp.com/jobadds
 
   return (
     <div>

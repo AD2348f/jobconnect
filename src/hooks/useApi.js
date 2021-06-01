@@ -5,7 +5,7 @@ const useApi = () => {
     
     const [jobadds, jobaddsSet] = useState([]);
     const [loader, setLoader] = useState(false);
-    const url = "https://jobconnect-try.herokuapp.com/jobadds";
+    const url = "https://jobconnect-try.herokuapp.com/jobadds";    
   
     useEffect(() => { fetchJobAdds();
         }, []);

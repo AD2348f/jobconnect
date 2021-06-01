@@ -13,17 +13,26 @@ const SearchPage = (props) => {
       .then(data => {
          setAdList(data.data) 
          setAdListDefault(data.data)
-       });}
-
-  const updateInput = async (input) => {
-     const filtered = adListDefault.filter(jobAd => {
-      return jobAd.addTitle.toLowerCase().includes(input.toLowerCase())
-     })
-     setInput(input);
-     setAdList(filtered);
+       });
   }
 
-  useEffect( () => {fetchData()},[]);
+  const updateInput = (input) => {
+    setInput(input);
+  }
+  
+  useEffect(() => {
+    if (adListDefault) {
+      const filtered = adListDefault.filter(jobAd => {
+       return jobAd.addTitle.toLowerCase().includes(input.toLowerCase());
+      });
+      
+      setAdList(filtered);
+    }
+  } , [input])
+
+  useEffect( () => {
+    fetchData()
+  },[]);
 	
   return (
     <>

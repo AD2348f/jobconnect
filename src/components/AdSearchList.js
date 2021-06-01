@@ -6,7 +6,7 @@ const AdSearchList = ({adList=[]}) => {
     { adList.map((data,index) => {
         if (data) {
           return (
-            <div key={data.addTitle}>
+            <div key={index}>
               <h1>{data.addTitle}</h1>
 	    </div>	
     	   )	
