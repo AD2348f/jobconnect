@@ -8,40 +8,25 @@ import SidebarLeft from '../components/SidebarLeft';
 const Jobadds = () => {
  
 const [jobadds] = useApi();
-  return (
-  
+  return (  
     <div className='App'>
       <SidebarLeft />
         {jobadds.map((jobadd) => (
-         
-            
-               
-            <Card key={jobadd._id} style={{ width: '90rem' }}>
-  <Card.Body>
-    <Card.Title>{jobadd.addTitle}</Card.Title>
-    <Card.Subtitle className="mb-2 text-muted">{jobadd.addLocation}</Card.Subtitle>
-    <Card.Text>
-    {jobadd.addDesc}    
-    </Card.Text>
-    <Card.Text>
-    {jobadd.addTech}
-    </Card.Text>
-    <Card.Link href="#"><Link to={`/jobadd/${jobadd._id}`}>Read more</Link>{" "}</Card.Link>    
-  </Card.Body>
-</Card>      
-        
-        ))}   
-
-
-
-
-
+            <Card key={jobadd._id} style={{ width: '90rem' }} className="m-3">
+              <Card.Body className="ml-5">
+                <Card.Title>{jobadd.addTitle}</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">{jobadd.addLocation}</Card.Subtitle>
+                <Card.Text>
+                  {jobadd.addDesc}    
+                </Card.Text>
+                <Card.Text>
+                  {jobadd.addTech}
+                </Card.Text>
+                <Card.Link href="#"><Link to={`/jobadd/${jobadd._id}`}>Read more</Link>{" "}</Card.Link>    
+              </Card.Body>
+            </Card>
+        ))} 
     </div>
-
-
-
-
-
   );
  };
 

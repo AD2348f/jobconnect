@@ -8,7 +8,7 @@ const Login = () => {
     return (        
         <Card style={{ width: '90rem' }}>
           <Card.Body>
-            <Nav variant="tabs" defaultActiveKey="/home">
+            <Nav variant="tabs" defaultActiveKey="/home" className="mb-3">
             <Nav.Item>
                 <Nav.Link eventKey="link-1" href="">Coder</Nav.Link>
             </Nav.Item>
@@ -24,9 +24,6 @@ const Login = () => {
             <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />
-                <Form.Text className="text-muted">
-                Enter your E-Mail adress
-                </Form.Text>
             </Form.Group>
 
             <Form.Group controlId="formBasicPassword">
@@ -36,7 +33,7 @@ const Login = () => {
             <Form.Group controlId="formBasicCheckbox">
                 <Form.Check type="checkbox" label="Remember me" />
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" className="m-3">
                 Submit
             </Button>
             <Button variant="primary" type="submit">

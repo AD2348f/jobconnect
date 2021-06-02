@@ -8,7 +8,7 @@ const Register = () => {
     return (        
         <Card style={{ width: '90rem' }}>
           <Card.Body>
-            <Nav variant="tabs" defaultActiveKey="/home">
+            <Nav variant="tabs" defaultActiveKey="/home" className="mb-3">
             <Nav.Item>
                 <Nav.Link eventKey="link-1" href="">Coder</Nav.Link>
             </Nav.Item>
@@ -34,7 +34,7 @@ const Register = () => {
                 <Form.Control type="password" placeholder="Password" />
             </Form.Group>
             
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" className="m-3">
                 Submit
             </Button>
             <Button variant="primary" type="submit">

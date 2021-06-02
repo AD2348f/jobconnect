@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import Singlejobadd from './components/Singlejobadd';
 import Jobadds from './components/Jobadds';
 import Header from './components/Header';
@@ -6,29 +6,33 @@ import Footer from './components/Footer';
 import Login from './components/Login';
 import Blog from './components/Blog';
 import Register from './components/Register';
-import Searchfield from './components/SearchPage';
 import { Link, Route, Switch } from "react-router-dom";
 import CreateAdd from './components/Createadd';
 import AboutUs from './components/AboutUs';
 import LegalInfo from './components/LegalInfo';
 import GDPR from './components/GDPR';
 import SearchPage from './components/SearchPage';
-
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 
 function App() {  
   return (
     <div className="App">
       <Header />  
-      <SearchPage />   
-      <div className="App__Main--wrapper">      
+      <Container className="mx-auto">
+  <Row className="mx-auto">    
+        
+  </Row>  
+  <Row className="justify-content-md-center">
         <Switch>
-          <div className="justify-content-center">
             <Route exact path="/jobadd/:id">               
               <Singlejobadd />                    
             </Route>
             <Route exact path="/">
-             <Jobadds />
+             {/* <Jobadds /> */}
+             <SearchPage />
             </Route>
             <Route exact path="/createadd">
              <CreateAdd />
@@ -51,12 +55,13 @@ function App() {
             <Route exact path="/GDPR">
              <GDPR />
             </Route>
-          </div>
-        </Switch>      
-      </div> 
-      <Footer />                  
-    </div>    
+        </Switch>  
+        </Row> 
+        <Row className="justify-content-md-center">    
+      <Footer />  
+      </Row>
+      </Container>               
+    </div>       
   );
 }
-
 export default App;

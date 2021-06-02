@@ -35,12 +35,12 @@ const SearchPage = (props) => {
   },[]);
 	
   return (
-    <>
-      <h1>Ad List</h1>
+    <>      
       <SearchBar 
        input={input} 
        onChange={updateInput}
       />
+      <button>Search</button>
       <AdSearchList adList={adList}/>
     </>
    );
