@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SearchBar from './SearchBar';
 import AdSearchList from './AdSearchList';
 import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
 import NoResult from './Noresult';
 
 const SearchPage = () => {
@@ -32,34 +33,46 @@ const handlefilter = () => {
   }
 }
 
+// const handleKeyDown = (event) => {
+//   if (event.key === 'Enter') {
+//     {handlefilter}
+//   }
+// }
+
+
+
 // const handlempty = () => {
-  
 //   if (adList.length!===0) {
 //     {console.log('noooooooooooo')}
+//      return(<NoResult />)
 //   } 
 // }
 
-// console.log({AdList})
 
-  // return(<NoResult />)
+
+  
 
   useEffect( () => {
     fetchData()
   },[]);
 	
   return (
-    <>     
-    <Row className="mb-3">
+    <>  
+    <Container className="justify-content-md-center">   
+    <Row className="mb-3 justify-content-md-center">
       <SearchBar 
        input={input} 
-       onChange={updateInput}      
+       onChange={updateInput} 
+      //  onKeyDown={handleUserKeyPress}     
       />      
       <button onClick={handlefilter}>Search</button>
-      </Row> 
-      <Row>
+      </Row>
+      <Row>Buffer
+        </Row> 
+      <Row className="justify-content-md-center">
       <AdSearchList adList={adList}/>
       </Row>
-      
+      </Container>
     </>
    );
 }
