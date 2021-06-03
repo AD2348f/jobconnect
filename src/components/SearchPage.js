@@ -40,7 +40,7 @@ const SearchPage = (props) => {
        input={input} 
        onChange={updateInput}
       />
-      <button>Search</button>
+      
       <AdSearchList adList={adList}/>
     </>
    );
