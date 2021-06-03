@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import SearchBar from './SearchBar';
 import AdSearchList from './AdSearchList';
+import Row from 'react-bootstrap/Row';
+import NoResult from './Noresult';
 
-const SearchPage = (props) => {
-  const [input, setInput] = useState('');
+const SearchPage = () => {
+  const [input, setInput] = useState(''); 
   const [adListDefault, setAdListDefault] = useState();
   const [adList, setAdList] = useState();
 
@@ -19,29 +21,45 @@ const SearchPage = (props) => {
   const updateInput = (input) => {
     setInput(input);
   }
+ 
   
-  useEffect(() => {
-    if (adListDefault) {
-      const filtered = adListDefault.filter(jobAd => {
-       return jobAd.addTitle.toLowerCase().includes(input.toLowerCase());
-      });
-      
-      setAdList(filtered);
-    }
-  } , [input])
+const handlefilter = () => {
+  if (adListDefault) {
+    const filtered = adListDefault.filter(jobAd => {      
+     return jobAd.addTitle.toLowerCase().includes(input.toLowerCase());
+    });    
+    setAdList(filtered);
+  }
+}
+
+const handlempty = () => {
+  
+//   if (adList.length!===0) {
+//     {console.log('noooooooooooo')}
+//   } 
+// }
+
+// console.log({AdList})
+
+  // return(<NoResult />)
 
   useEffect( () => {
     fetchData()
   },[]);
 	
   return (
-    <>      
+    <>     
+    <Row className="mb-3">
       <SearchBar 
        input={input} 
-       onChange={updateInput}
-      />
-      
+       onChange={updateInput}      
+      />      
+      <button onClick={handlefilter}>Search</button>
+      </Row> 
+      <Row>
       <AdSearchList adList={adList}/>
+      </Row>
+      
     </>
    );
 }
