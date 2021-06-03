@@ -32,7 +32,7 @@ const handlefilter = () => {
   }
 }
 
-const handlempty = () => {
+// const handlempty = () => {
   
 //   if (adList.length!===0) {
 //     {console.log('noooooooooooo')}
