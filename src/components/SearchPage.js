@@ -4,13 +4,14 @@ import AdSearchList from './AdSearchList';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import NoResult from './Noresult';
+import SidebarLeft from './SidebarLeft';
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 
 const SearchPage = () => {
   const [input, setInput] = useState(''); 
   const [adListDefault, setAdListDefault] = useState();
-  const [adList, setAdList] = useState();
+  const [adList, setAdList] = useState([]);
 
   const fetchData = async () => {
     return await fetch('https://jobconnect-try.herokuapp.com/jobadds')
@@ -26,12 +27,26 @@ const SearchPage = () => {
   }
  
   
-const handlefilter = () => {
+const handleFilter = () => {
   if (adListDefault) {
     const filtered = adListDefault.filter(jobAd => {      
      return jobAd.addTitle.toLowerCase().includes(input.toLowerCase());
     });    
     setAdList(filtered);
+  }
+}
+
+const handleReset = () => {
+    setInput('');
+    fetchData();
+    // {handleFilter};    
+  }
+
+
+const onKeyDown = (e) => {
+  console.log(e)
+  if (e.key === 'Enter') {
+    handleFilter()
   }
 }
 
@@ -44,15 +59,12 @@ const handlefilter = () => {
 
 
 // const handlempty = () => {
-//   if (adList.length!===0) {
-//     {console.log('noooooooooooo')}
+//   if (adList.length===0) {
+//     {console.log('no Result')}
 //      return(<NoResult />)
 //   } 
 // }
 
-
-
-  
 
   useEffect( () => {
     fetchData()
@@ -67,17 +79,23 @@ const handlefilter = () => {
             <SearchBar 
               input={input} 
               onChange={updateInput} 
-              //  onKeyDown={handleUserKeyPress}     
+              onKeyDown={onKeyDown}     
             />
           </Col>
           <Col>
-            <Button variant="outline-secondary" id="button-addon2" onClick={handlefilter}>
+            <Button variant="outline-secondary" id="button-addon2" onClick={handleFilter}>
               Search
+            </Button>
+            <Button variant="outline-secondary" id="button-addon2" onClick={handleReset}>
+              X
             </Button>
           </Col>          
         </Row>      
         <Row className="justify-content-md-center">
-          <AdSearchList adList={adList}/>
+        <SidebarLeft />
+
+          {(adList.length) ? <AdSearchList adList={adList}/> : <NoResult />}
+          
         </Row>
       </Container>
     </>

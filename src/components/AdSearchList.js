@@ -1,13 +1,11 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
-import SidebarLeft from './SidebarLeft';
 import { Link } from 'react-router-dom';
 import NoResult from './Noresult';
 
 const AdSearchList = ({adList=[]}) => {
   return (
     <>
-    <SidebarLeft />
     { adList.map((data,index) => {         
         if (data) {
           return (
