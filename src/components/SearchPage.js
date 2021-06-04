@@ -4,6 +4,8 @@ import AdSearchList from './AdSearchList';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import NoResult from './Noresult';
+import Button from 'react-bootstrap/Button'
+import Col from 'react-bootstrap/Col'
 
 const SearchPage = () => {
   const [input, setInput] = useState(''); 
@@ -58,20 +60,25 @@ const handlefilter = () => {
 	
   return (
     <>  
-    <Container className="justify-content-md-center">   
-    <Row className="mb-3 justify-content-md-center">
-      <SearchBar 
-       input={input} 
-       onChange={updateInput} 
-      //  onKeyDown={handleUserKeyPress}     
-      />      
-      <button onClick={handlefilter}>Search</button>
-      </Row>
-      <Row>Buffer
-        </Row> 
-      <Row className="justify-content-md-center">
-      <AdSearchList adList={adList}/>
-      </Row>
+      <Container className="justify-content-md-center">   
+        <Row className="my-3">
+          <Col></Col>
+          <Col>
+            <SearchBar 
+              input={input} 
+              onChange={updateInput} 
+              //  onKeyDown={handleUserKeyPress}     
+            />
+          </Col>
+          <Col>
+            <Button variant="outline-secondary" id="button-addon2" onClick={handlefilter}>
+              Search
+            </Button>
+          </Col>          
+        </Row>      
+        <Row className="justify-content-md-center">
+          <AdSearchList adList={adList}/>
+        </Row>
       </Container>
     </>
    );
