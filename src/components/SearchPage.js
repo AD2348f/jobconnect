@@ -50,22 +50,6 @@ const onKeyDown = (e) => {
   }
 }
 
-// const handleKeyDown = (event) => {
-//   if (event.key === 'Enter') {
-//     {handlefilter}
-//   }
-// }
-
-
-
-// const handlempty = () => {
-//   if (adList.length===0) {
-//     {console.log('no Result')}
-//      return(<NoResult />)
-//   } 
-// }
-
-
   useEffect( () => {
     fetchData()
   },[]);
@@ -112,24 +96,3 @@ export default SearchPage
 
 
 
-
-// old version below
-
-// import React from 'react';
-
-
-// const SearchPage = () => {
-//     return (        
-//            <div className="justify-content-center">
-//           <form className="App__Searchpage" action="">            
-//            <input type="text" placeholder="search"></input>
-//             <button>Find Jobs</button>
-//             <input type="text" placeholder="search"></input>
-//             <button>Add a Location</button>
-//           </form>
-//           </div> 
-        
-//     )
-// }
-
-// export default SearchPage;

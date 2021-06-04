@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import Login from './components/Login';
 import Blog from './components/Blog';
 import Register from './components/Register';
-import { Link, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import CreateAdd from './components/Createadd';
 import AboutUs from './components/AboutUs';
 import LegalInfo from './components/LegalInfo';

@@ -1,6 +1,4 @@
-import { Link } from 'react-router-dom';
 import React from "react";
-import useApi from '../hooks/useApi';
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
