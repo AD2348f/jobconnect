@@ -13,6 +13,7 @@ import GDPR from './components/GDPR';
 import SearchPage from './components/SearchPage';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import LandingPage from './components/Ladingpage';
 
 
 
@@ -22,6 +23,7 @@ function App() {
       <Header />  
       <Container className="mx-auto">
   <Row className="mx-auto">    
+  
         
   </Row>  
   <Row className="justify-content-md-center">
@@ -29,8 +31,11 @@ function App() {
             <Route exact path="/jobadd/:id">               
               <Singlejobadd />                    
             </Route>
-            <Route exact path="/">
-             {/* <Jobadds /> */}
+            <Route exact path="/">             
+             <LandingPage />
+             {/* <SearchPage /> */}
+            </Route>
+            <Route exact path="/search">             
              <SearchPage />
             </Route>
             <Route exact path="/createadd">

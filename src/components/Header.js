@@ -18,11 +18,16 @@ function Header() {
             <Col  xs={4}></Col>
             <Col md="auto">
               <Nav className="justify-content-center" >
-                <Nav.Item>
+              <Nav.Item>
                     <Nav.Link title="Item">
                     <Link to="/">Home</Link>
                     </Nav.Link>
                   </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link title="Item">
+                    <Link to="/search">Search</Link>
+                    </Nav.Link>
+                  </Nav.Item>                  
                   <Nav.Item>
                     <Nav.Link title="Item">
                     <Link to="/createadd">Create ad</Link>
