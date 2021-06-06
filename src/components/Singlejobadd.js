@@ -3,6 +3,12 @@ import Axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Card from 'react-bootstrap/Card'
 import { Link, Route, Switch } from "react-router-dom";
+import * as Icon from 'react-bootstrap-icons';
+import moment from 'moment';
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
 
 
 
@@ -27,21 +33,53 @@ const fetchJobAdd = async() => {
     setLoader(false)
 }   
 
-console.log(jobadd)
+// const date = new Date(jobadd.addDate);
+
+// const formattedDate = format (date, "yyyy-MM-dd");
+
 
   return (
     <div className="App__Singleoffer">                  
       <Card key={jobadd._id} style={{ width: '90rem' }} className="mt-5">
           <Card.Body>
-            <Card.Title>{jobadd.addTitle}</Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">{jobadd.addLocation}</Card.Subtitle>
-            <Card.Text>
-            {jobadd.addFull}    
+            <h1>
+            <Card.Title class="font-weight-bold">{jobadd.addTitle}</Card.Title>
+            </h1>
+            <Card.Subtitle className="mb-2 text-muted" class="font-weight-bold">
+              <Container>
+                <Row className="mb-3">
+                <Col md="auto">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                   <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                   <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  </svg> Location: {jobadd.addLocation}
+                </Col> 
+                <Col md="auto">
+                <Icon.Calendar /> Posted on: {moment(jobadd.addDate).format('MMMM Do YYYY, h:mm a')}   
+                </Col> 
+                <Col>
+                  <Icon.Building /> Company: {jobadd.addComp} 
+                </Col>
+                <Col md="auto">                 
+                  <Icon.Clock /> Workingtime: {jobadd.addWrkt}
+                </Col>    
+                <Col md="auto">
+                <Icon.Briefcase /> Contract: {jobadd.addContr}
+                </Col>
+                </Row>
+              </Container>
+            </Card.Subtitle>
+            <Card.Text>              
+            {jobadd.addFull}           
             </Card.Text>
-            <Card.Text>
-            {jobadd.addTech}
+            <Card.Text class="font-weight-bold">
+              Techstack: {jobadd.addTech}
             </Card.Text>
-            <Link to="/">Back</Link>               
+            <Row>            
+            <Button variant="outline-primary" className="mx-3"><Link to="/search">Back</Link></Button>            
+            <Button variant="outline-primary" className="mx-3">Apply</Button>            
+            <Button variant="outline-primary" className="mx-3">Save <Icon.Bookmark /></Button>            
+            </Row>
           </Card.Body>          
       </Card>  
     </div>

@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 import SidebarLeft from './SidebarLeft';
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
-import { Columns } from 'react-bootstrap-icons';
+
 
 
 const LandingPage = () => {

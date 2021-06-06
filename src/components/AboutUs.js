@@ -25,11 +25,10 @@ const AboutUs = () => {
 
 <Card style={{ width: '18rem' }}>
   <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+    <Card.Title>About Us</Card.Title>
+    <Card.Subtitle className="mb-2 text-muted">Our Story</Card.Subtitle>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+      Founded in 2021 to bring junior jalents in jech together with companys and make the entry into tech easier.
     </Card.Text>
   </Card.Body>
 </Card>
