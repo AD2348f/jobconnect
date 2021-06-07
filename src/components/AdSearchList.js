@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
-// import SidebarLeft from './SidebarLeft';
+
 import { Link } from 'react-router-dom';
-import NoResult from './Noresult';
+
 
 import DropCat from '../components/DropCat'
 
@@ -10,8 +10,10 @@ import DropCat from '../components/DropCat'
 const AdSearchList = ({adList=[]}) => {
   return (
     <>
-    {/* <SidebarLeft /> */}
+
     <DropCat />
+
+
     { adList.map((data,index) => {         
         if (data) {
           return (

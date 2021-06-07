@@ -1,21 +1,22 @@
 // import './App.css';
 import Singlejobadd from './components/Singlejobadd';
-import Jobadds from './components/Jobadds';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import Blog from './components/Blog';
 import Register from './components/Register';
-import { Link, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import CreateAdd from './components/Createadd';
 import AboutUs from './components/AboutUs';
 import LegalInfo from './components/LegalInfo';
 import GDPR from './components/GDPR';
 import SearchPage from './components/SearchPage';
+
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import UserInterface from './components/UserInterface'
+
 
 
 
@@ -28,6 +29,7 @@ function App() {
       <Header />  
       <Container className="mx-auto">
   <Row className="mx-auto">    
+  
         
   </Row>  
   <Row className="justify-content-md-center">
@@ -35,8 +37,11 @@ function App() {
             <Route exact path="/jobadd/:id">               
               <Singlejobadd />                    
             </Route>
-            <Route exact path="/">
-             {/* <Jobadds /> */}
+            <Route exact path="/">             
+             <LandingPage />
+             {/* <SearchPage /> */}
+            </Route>
+            <Route exact path="/search">             
              <SearchPage />
             </Route>
             <Route exact path="/createadd">
