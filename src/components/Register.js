@@ -9,9 +9,9 @@ import Tab from 'react-bootstrap/Tab'
 const Register = () => {
     return (        
 
-        <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-            <Tab eventKey="home" title="Companies">
-                <Card style={{ width: '60rem' }} className="align-items-center">
+        <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="align-items-center mt-5">
+            <Tab eventKey="home" title="Companies" className="mb-5">
+                <Card style={{ width: '60rem' }} className="align-items-center mb-5">
                     <Card.Body>
                         <Nav variant="tabs" defaultActiveKey="/home" className="mb-3">
                             <Nav.Item>
@@ -43,7 +43,7 @@ const Register = () => {
                 </Card>  
             </Tab>
 
-            <Tab eventKey="profile" title="Developers">
+            <Tab eventKey="profile" title="Developers" className="mb-5">
                 <Card style={{ width: '60rem' }} className="align-items-center">
                     <Card.Body>
                         <Nav variant="tabs" defaultActiveKey="/home" className="mb-3">
@@ -76,7 +76,7 @@ const Register = () => {
                  </Card>  
             </Tab>
 
-            <Tab eventKey="contact" title="Bootcamps">
+            <Tab eventKey="contact" title="Bootcamps" className="mb-5">
                 <Card style={{ width: '60rem' }} className="align-items-center">
                     <Card.Body>
                         <Nav variant="tabs" defaultActiveKey="/home" className="mb-3">

@@ -71,9 +71,10 @@ function App() {
         </Switch>  
         </Row> 
         <Row className="justify-content-md-center">    
-      <Footer />  
+      
       </Row>
-      </Container>               
+      </Container>  
+      <Footer />               
     </div>       
   );
 }

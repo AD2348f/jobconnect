@@ -6,11 +6,13 @@ import Card from 'react-bootstrap/Card'
 
 
 
+
 const Login = () => {
 
-    return (        
+    return (      
+          
 
-                <Card style={{ width: '60rem' }} className="align-items-center">
+                <Card style={{ width: '60rem' }} className="align-items-center mt-5 mb-5">
                     <Card.Body>
                     <Card.Title>Login to Your Area</Card.Title>
                         <Nav variant="tabs" defaultActiveKey="/home" className="mb-3">
