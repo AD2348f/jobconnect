@@ -3,46 +3,112 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Nav from 'react-bootstrap/Nav'
 import Card from 'react-bootstrap/Card'
+import Tabs from 'react-bootstrap/Tabs'
+import Tab from 'react-bootstrap/Tab'
 
 const Register = () => {
     return (        
-        <Card style={{ width: '90rem' }}>
-          <Card.Body>
-            <Nav variant="tabs" defaultActiveKey="/home" className="mb-3">
-            <Nav.Item>
-                <Nav.Link eventKey="link-1" href="">Coder</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link eventKey="link-2">Company</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link eventKey="link-3">Bootcamp</Nav.Link>
-            </Nav.Item>
-            </Nav>
 
-            <Form>
-            <Form.Group controlId="formBasicEmail">
-                <Form.Label>Enter your E-Mail adress</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
-                <Form.Text className="text-muted">
+        <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+            <Tab eventKey="home" title="Companies">
+                <Card style={{ width: '60rem' }} className="align-items-center">
+                    <Card.Body>
+                        <Nav variant="tabs" defaultActiveKey="/home" className="mb-3">
+                            <Nav.Item>
+
+                                <Form>
+                                    <Form.Group controlId="formBasicEmail">
+                                        <Form.Label>Enter your E-Mail adress</Form.Label>
+                                        <Form.Control type="email" placeholder="Enter email" style={{ width: '20rem' }}/>
+                                    </Form.Group>
+
+                                    <Form.Group controlId="formBasicPassword">
+                                        <Form.Label>Choose a Password</Form.Label>
+                                        <Form.Control type="password" placeholder="Password" style={{ width: '20rem' }}/>
+                                    </Form.Group>
+
+                                    <Form.Group controlId="formBasicPassword">
+                                        <Form.Label>Confirm Password</Form.Label>
+                                        <Form.Control type="password" placeholder="Password" style={{ width: '20rem' }}/>
+                                    </Form.Group>
+
+                                    <Button variant="primary" type="submit">
+                                        Register
+                                    </Button>
+                                </Form>
+
+                            </Nav.Item>
+                        </Nav>          
+                    </Card.Body>
+                </Card>  
+            </Tab>
+
+            <Tab eventKey="profile" title="Developers">
+                <Card style={{ width: '60rem' }} className="align-items-center">
+                    <Card.Body>
+                        <Nav variant="tabs" defaultActiveKey="/home" className="mb-3">
+                            <Nav.Item>
                 
-                </Form.Text>
-            </Form.Group>
+                                <Form>
+                                    <Form.Group controlId="formBasicEmail">
+                                        <Form.Label>Enter your E-Mail adress</Form.Label>
+                                        <Form.Control type="email" placeholder="Enter email" style={{ width: '20rem' }}/>
+                                    </Form.Group>
 
-            <Form.Group controlId="formBasicPassword">
-                <Form.Label>Choose a Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
-            </Form.Group>
-            
-            <Button variant="primary" type="submit" className="m-3">
-                Submit
-            </Button>
-            <Button variant="primary" type="submit">
-                Login
-            </Button>
-            </Form>
-            </Card.Body>
-      </Card>  
+                                    <Form.Group controlId="formBasicPassword">
+                                        <Form.Label>Choose a Password</Form.Label>
+                                        <Form.Control type="password" placeholder="Password" style={{ width: '20rem' }}/>
+                                    </Form.Group>
+
+                                    <Form.Group controlId="formBasicPassword">
+                                        <Form.Label>Confirm Password</Form.Label>
+                                        <Form.Control type="password" placeholder="Password" style={{ width: '20rem' }}/>
+                                    </Form.Group>
+
+                                    <Button variant="primary" type="submit">
+                                        Register
+                                    </Button>
+                                </Form>
+
+                            </Nav.Item>
+                        </Nav>          
+                    </Card.Body>
+                 </Card>  
+            </Tab>
+
+            <Tab eventKey="contact" title="Bootcamps">
+                <Card style={{ width: '60rem' }} className="align-items-center">
+                    <Card.Body>
+                        <Nav variant="tabs" defaultActiveKey="/home" className="mb-3">
+                            <Nav.Item>
+                
+                                <Form>
+                                    <Form.Group controlId="formBasicEmail">
+                                        <Form.Label>Enter your E-Mail adress</Form.Label>
+                                        <Form.Control type="email" placeholder="Enter email" style={{ width: '20rem' }}/>
+                                    </Form.Group>
+
+                                    <Form.Group controlId="formBasicPassword">
+                                        <Form.Label>Choose a Password</Form.Label>
+                                        <Form.Control type="password" placeholder="Password" style={{ width: '20rem' }}/>
+                                    </Form.Group>
+
+                                    <Form.Group controlId="formBasicPassword">
+                                        <Form.Label>Confirm Password</Form.Label>
+                                        <Form.Control type="password" placeholder="Password" style={{ width: '20rem' }}/>
+                                    </Form.Group>
+
+                                    <Button variant="primary" type="submit">
+                                        Register
+                                    </Button>
+                                </Form>
+
+                            </Nav.Item>
+                        </Nav>          
+                    </Card.Body>
+                </Card>  
+            </Tab>
+        </Tabs>        
     )
 }
 
