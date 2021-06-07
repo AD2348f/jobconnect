@@ -2,14 +2,17 @@ import { Link } from 'react-router-dom';
 import React from "react";
 import useApi from '../hooks/useApi';
 import Card from 'react-bootstrap/Card'
-import SidebarLeft from '../components/SidebarLeft';
+// import SidebarLeft from '../components/SidebarLeft';
+
+import DropCat from '../components/DropCat'
 
 const Jobadds = () => {
  
 const [jobadds] = useApi();
   return (  
     <div className='App'>
-      <SidebarLeft />
+      {/* <SidebarLeft /> */}
+      <DropCat />
         {jobadds.map((jobadd) => (
             <Card key={jobadd._id} style={{ width: '90rem' }} className="m-3">
               <Card.Body className="ml-5">

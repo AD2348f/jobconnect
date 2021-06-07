@@ -47,6 +47,11 @@ function Header() {
                   <Nav.Link>
                   <Link to="/Blog">Blog</Link>
                   </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                  <Nav.Link>
+                  <Link to="/UserInterface">Dev</Link>
+                  </Nav.Link>
                 </Nav.Item>
               </Nav>
             </Col>    

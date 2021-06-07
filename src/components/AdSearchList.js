@@ -1,11 +1,19 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
+
 import { Link } from 'react-router-dom';
+
+
+import DropCat from '../components/DropCat'
 
 
 const AdSearchList = ({adList=[]}) => {
   return (
     <>
+
+    <DropCat />
+
+
     { adList.map((data,index) => {         
         if (data) {
           return (
