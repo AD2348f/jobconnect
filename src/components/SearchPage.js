@@ -4,7 +4,7 @@ import AdSearchList from './AdSearchList';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import NoResult from './Noresult';
-import SidebarLeft from './SidebarLeft';
+// import SidebarLeft from './SidebarLeft';
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 
@@ -76,7 +76,7 @@ const onKeyDown = (e) => {
           </Col>          
         </Row>      
         <Row className="justify-content-md-center">
-        <SidebarLeft />
+        {/* <SidebarLeft /> */}
 
           {(adList.length) ? <AdSearchList adList={adList}/> : <NoResult />}
           

@@ -11,7 +11,7 @@ import AboutUs from './components/AboutUs';
 import LegalInfo from './components/LegalInfo';
 import GDPR from './components/GDPR';
 import SearchPage from './components/SearchPage';
-
+import LandingPage from './components/LandingPage'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
