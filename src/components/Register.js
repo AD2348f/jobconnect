@@ -6,7 +6,16 @@ import Card from 'react-bootstrap/Card'
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 
+import { useHistory } from 'react-router-dom';
+
+
 const Register = () => {
+
+    const history = useHistory();
+    const handleClick = () => history.push('/RegisterDev');
+    const handleClickOne = () => history.push('/RegisterComp');
+    const handleClickTwo = () => history.push('/RegisterBoot');
+
     return (        
 
         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
@@ -32,8 +41,8 @@ const Register = () => {
                                         <Form.Control type="password" placeholder="Password" style={{ width: '20rem' }}/>
                                     </Form.Group>
 
-                                    <Button variant="primary" type="submit">
-                                        Register
+                                    <Button variant="primary" type="submit" onClick={handleClickOne}>
+                                        Proceed
                                     </Button>
                                 </Form>
 
@@ -65,8 +74,8 @@ const Register = () => {
                                         <Form.Control type="password" placeholder="Password" style={{ width: '20rem' }}/>
                                     </Form.Group>
 
-                                    <Button variant="primary" type="submit">
-                                        Register
+                                    <Button variant="primary" type="submit" onClick={handleClick}>
+                                        Proceed
                                     </Button>
                                 </Form>
 
@@ -98,8 +107,8 @@ const Register = () => {
                                         <Form.Control type="password" placeholder="Password" style={{ width: '20rem' }}/>
                                     </Form.Group>
 
-                                    <Button variant="primary" type="submit">
-                                        Register
+                                    <Button variant="primary" type="submit" onClick={handleClickTwo}>
+                                        Proceed
                                     </Button>
                                 </Form>
 
