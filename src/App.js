@@ -17,8 +17,9 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import UserInterface from './components/UserInterface'
 
-
-
+import RegisterDev from './components/RegisterDev'
+import RegisterComp from './components/RegisterComp'
+import RegisterBoot from './components/RegisterBoot'
 
 
 
@@ -58,6 +59,15 @@ function App() {
             </Route>
             <Route exact path="/UserInterface">
              <UserInterface />
+            </Route>
+            <Route exact path="/RegisterDev">
+             <RegisterDev />
+            </Route>
+            <Route exact path="/RegisterComp">
+             <RegisterComp />
+            </Route>
+            <Route exact path="/RegisterBoot">
+             <RegisterBoot />
             </Route>
             <Route exact path="/AboutUs">
              <AboutUs />
