@@ -4,7 +4,7 @@ import useApi from '../hooks/useApi';
 import Card from 'react-bootstrap/Card'
 // import SidebarLeft from '../components/SidebarLeft';
 
-import DropCat from '../components/DropCat'
+// import DropCat from '../components/DropCat'
 
 const Jobadds = () => {
  
@@ -12,7 +12,7 @@ const [jobadds] = useApi();
   return (  
     <div className='App'>
       {/* <SidebarLeft /> */}
-      <DropCat />
+      {/* <DropCat /> */}
         {jobadds.map((jobadd) => (
             <Card key={jobadd._id} style={{ width: '90rem' }} className="m-3">
               <Card.Body className="ml-5">
