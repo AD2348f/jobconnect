@@ -1,6 +1,6 @@
 {
   "name": "jobconnect",   
-  "homepage": "https://ad2348f.github.io/jobconnect/",
+  "homepage": "./",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
