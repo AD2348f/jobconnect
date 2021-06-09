@@ -14,7 +14,12 @@ import SearchPage from './components/SearchPage';
 import LandingPage from './components/LandingPage'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import UserInterface from './components/UserInterface'
+
+import Col from 'react-bootstrap/Col'
+import AreaDev from './components/AreaDev'
+import AreaComp from './components/AreaComp'
+import AreaBoot from './components/AreaBoot'
+
 import RegisterDev from './components/RegisterDev'
 import RegisterComp from './components/RegisterComp'
 import RegisterBoot from './components/RegisterBoot'
@@ -62,8 +67,14 @@ function App() {
             <Route exact path="/Blog">
              <Blog />
             </Route>
-            <Route exact path="/UserInterface">
-             <UserInterface />
+            <Route exact path="/AreaDev">
+             <AreaDev />
+            </Route>
+            <Route exact path="/AreaComp">
+             <AreaComp />
+            </Route>
+            <Route exact path="/AreaBoot">
+             <AreaBoot />
             </Route>
             <Route exact path="/RegisterDev">
              <RegisterDev />

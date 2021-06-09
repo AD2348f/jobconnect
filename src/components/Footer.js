@@ -10,7 +10,7 @@ const Footer = () => {
     return (        
     <>
     <Container fluid 
-        style={{backgroundColor: "blue"        
+        style={{backgroundColor: "blue"       
         }}        >
         <Nav className="justify-content-center"  >
     <Nav.Item >
