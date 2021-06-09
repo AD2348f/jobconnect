@@ -1,20 +1,33 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { Redirect } from 'react-router-dom';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Nav from 'react-bootstrap/Nav'
 import Card from 'react-bootstrap/Card'
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
-
 import { useHistory } from 'react-router-dom';
+import useFormData from '../useFormData';
+import { AuthContext } from '../AuthContext';
+
+const initialFormData = {
+    email: '',
+    password: '',
+    username: ''
+  }
 
 
 const Register = () => {
+
+    const [ formData, handleChange ] = useFormData(initialFormData)
+    const { register, isLoggedIn } = useContext(AuthContext);
 
     const history = useHistory();
     const handleClick = () => history.push('/RegisterDev');
     const handleClickOne = () => history.push('/RegisterComp');
     const handleClickTwo = () => history.push('/RegisterBoot');
+
+    if (isLoggedIn()) return <Redirect to='/' />
 
     return (        
 
@@ -52,7 +65,7 @@ const Register = () => {
                 </Card>  
             </Tab>
 
-            <Tab eventKey="profile" title="Developers" className="mb-5">
+            <Tab eventKey="profile" title="Developers (working)" className="mb-5">
                 <Card style={{ width: '60rem' }} className="align-items-center">
                     <Card.Body>
                         <Nav variant="tabs" defaultActiveKey="/home" className="mb-3">
@@ -60,13 +73,24 @@ const Register = () => {
                 
                                 <Form>
                                     <Form.Group controlId="formBasicEmail">
-                                        <Form.Label>Enter your E-Mail adress</Form.Label>
-                                        <Form.Control type="email" placeholder="Enter email" style={{ width: '20rem' }}/>
+                                        <Form.Label>Enter your E-Mail adress (working)</Form.Label>
+                                        <Form.Control 
+                                        type="text" 
+                                        placeholder="Enter email"
+                                        name="email"
+                                        onChange={handleChange} 
+                                        style={{ width: '20rem' }}
+                                        />
                                     </Form.Group>
 
                                     <Form.Group controlId="formBasicPassword">
                                         <Form.Label>Choose a Password</Form.Label>
-                                        <Form.Control type="password" placeholder="Password" style={{ width: '20rem' }}/>
+                                        <Form.Control 
+                                        type="text" 
+                                        placeholder="Password"
+                                        name="password"
+                                        onChange={handleChange} 
+                                        style={{ width: '20rem' }}/>
                                     </Form.Group>
 
                                     <Form.Group controlId="formBasicPassword">
@@ -74,7 +98,7 @@ const Register = () => {
                                         <Form.Control type="password" placeholder="Password" style={{ width: '20rem' }}/>
                                     </Form.Group>
 
-                                    <Button variant="primary" type="submit" onClick={handleClick}>
+                                    <Button variant="primary" type="submit" onClick={() => register(formData)}>
                                         Proceed
                                     </Button>
                                 </Form>
