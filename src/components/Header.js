@@ -73,7 +73,8 @@ function Header() {
                   <Link to="/AreaBoot" style={{color:"white"}}>BootCamps</Link>
                   </Nav.Link>
                   </Nav.Item>
-
+                  <Nav.Item>
+                  <Nav.Link>                  
                   <Link to="/admin" style={{color:"white"}}>Admin</Link>
                   </Nav.Link>
                   </Nav.Item>
