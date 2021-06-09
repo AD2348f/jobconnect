@@ -3,12 +3,16 @@ import Card from 'react-bootstrap/Card'
 import CardColumns from 'react-bootstrap/CardColumns'
 // import Row from 'react-bootstrap/Row'
 import Image from 'react-bootstrap/Image'
+import Container from 'react-bootstrap/Container'
 
-const UserInterface = () => {
+
+
+
+const AreaDev = () => {
     return (
-        <>
         
-            <Card style={{ width: '90rem' }}>
+        <Container className="align-items-center mt-3" style={{ width: '90rem' }}>
+            <Card>
                 <Card.Body>
                     <Image src="holder.js/171x180" rounded />
                     <Card.Title>John Doe</Card.Title>
@@ -49,7 +53,7 @@ const UserInterface = () => {
                 </Card.Body>
             </Card>
         </CardColumns>
-        <Card style={{ width: '90rem' }}>
+        <Card>
                 <Card.Body>
                     <Card.Title>Previous Experience</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">
@@ -59,8 +63,17 @@ const UserInterface = () => {
                         </Card.Subtitle>
                 </Card.Body>
             </Card>
-        </>
+
+            <Card className="mt-3 mb-3">
+            <Card.Body>
+                    <Card.Title>Recently visited</Card.Title>
+                        <Card.Text>
+                            I was here
+                        </Card.Text>
+            </Card.Body>
+        </Card>
+    </Container>
     )
 }
 
-export default UserInterface
+export default AreaDev

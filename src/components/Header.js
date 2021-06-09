@@ -30,11 +30,11 @@ function Header() {
                     <Link to="/search"style={{color:"white"}}>Search</Link>
                     </Nav.Link>
                   </Nav.Item>                  
-                  <Nav.Item>
+                  {/* <Nav.Item>
                     <Nav.Link title="Item">
                     <Link to="/createadd" style={{color:"white"}}>Create ad</Link>
                     </Nav.Link>
-                  </Nav.Item>
+                  </Nav.Item> */}
                   <Nav.Item>
                     <Nav.Link title="Login">
                     <Link to="/Login" style={{color:"white"}}>Login</Link>
@@ -52,9 +52,19 @@ function Header() {
                   </Nav.Item>
                   <Nav.Item>
                   <Nav.Link>
-                  <Link to="/UserInterface" style={{color:"white"}}>Dev</Link>
+                  <Link to="/AreaDev" style={{color:"white"}}>Dev</Link>
                   </Nav.Link>
-                </Nav.Item>
+                  </Nav.Item>
+                  <Nav.Item>
+                  <Nav.Link>
+                  <Link to="/AreaComp" style={{color:"white"}}>Company</Link>
+                  </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                  <Nav.Link>
+                  <Link to="/AreaBoot" style={{color:"white"}}>BootCamps</Link>
+                  </Nav.Link>
+                  </Nav.Item>
               </Nav>
             </Col>    
   </Row>  
