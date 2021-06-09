@@ -12,19 +12,27 @@ import LegalInfo from './components/LegalInfo';
 import GDPR from './components/GDPR';
 import SearchPage from './components/SearchPage';
 import LandingPage from './components/LandingPage'
+import User from './components/User'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
+
 import Col from 'react-bootstrap/Col'
 import AreaDev from './components/AreaDev'
 import AreaComp from './components/AreaComp'
 import AreaBoot from './components/AreaBoot'
+
 import RegisterDev from './components/RegisterDev'
 import RegisterComp from './components/RegisterComp'
 import RegisterBoot from './components/RegisterBoot'
+
 import BlogSingle from './components/BlogSingle'
 import BlogSingleOne from './components/BlogSingleOne'
 import BlogSingleTwo from './components/BlogSingleTwo'
 import BlogSingleThree from './components/BlogSingleThree'
+
+import ProtectedRoute from './components/ProtectedRoute'
+
+
 
 
 
@@ -38,16 +46,22 @@ function App() {
         
   </Row>  
   <Row className="justify-content-md-center">
+  
         <Switch>
+            <ProtectedRoute path="/AreaDev" component={AreaDev} />   
+            <ProtectedRoute path="/AreaComp" component={AreaComp} /> 
+            <ProtectedRoute path="/AreaBoot" component={AreaBoot} />
             <Route exact path="/jobadd/:id">               
               <Singlejobadd />                    
             </Route>
             <Route exact path="/">             
-             <LandingPage />
-             {/* <SearchPage /> */}
+             <LandingPage />             
             </Route>
             <Route exact path="/search">             
              <SearchPage />
+            </Route>
+            <Route exact path="/user">             
+             <User />
             </Route>
             <Route exact path="/createadd">
              <CreateAdd />

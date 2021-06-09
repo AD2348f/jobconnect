@@ -1,12 +1,21 @@
-import React from 'react'
+import React, {useEffect, useContext} from 'react'
 import Card from 'react-bootstrap/Card'
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
 import { Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav'
+import axios from 'axios'
+import {AuthContext} from '../AuthContext'
+
 
 const AreaComp = () => {
+    const {authToken} = useContext(AuthContext)
+
+    useEffect(() => {
+        axios.get('https://jobconnect-try.herokuapp.com/auth/me',{headers:{Authorization: `Bearer ${authToken}`}}).then(res => console.log(res)) 
+    },[])
+
     return (
         <Container style={{ width: '90rem' }}>
         <Card>

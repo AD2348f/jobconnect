@@ -4,8 +4,8 @@ import useFormData from '../hooks/useForm';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col'
-import Form from 'react-bootstrap/Form'
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 const initialFormData = {
   addTitle: '',
@@ -176,7 +176,9 @@ const CreateAdd = () => {
                             <br /><br />
                       </Row> 
                       <Row className="justify-content-md-center">
-                          <button onClick={submitAd}>Create Ad</button>
+                        <Button variant="outline-secondary" id="button-addon2" onClick={submitAd}>
+                          Create ad
+                        </Button>                          
                       </Row>        
                   </Card.Body>
               </Card>
