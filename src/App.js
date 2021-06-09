@@ -14,12 +14,14 @@ import SearchPage from './components/SearchPage';
 import LandingPage from './components/LandingPage'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import UserInterface from './components/UserInterface'
-
 import RegisterDev from './components/RegisterDev'
 import RegisterComp from './components/RegisterComp'
 import RegisterBoot from './components/RegisterBoot'
+
+import Admin from "./pages/Admin"
+import Signup from "./pages/Signup"
+import ProtectedRoute from './components/ProtectedRoute'
 
 
 
@@ -34,7 +36,10 @@ function App() {
         
   </Row>  
   <Row className="justify-content-md-center">
+  
         <Switch>
+        <ProtectedRoute path="/admin" component={Admin} />      
+      <Route path='/signup' component={Signup} />              
             <Route exact path="/jobadd/:id">               
               <Singlejobadd />                    
             </Route>

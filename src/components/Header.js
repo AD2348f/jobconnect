@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../AuthContext';
 import { Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav'
 import logo from '../pictures/logo_small.png'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Navigation from './Navigation'
 
 
 function Header() { 
+  const { isLoggedIn, logout } = useContext(AuthContext);
     return (      
       
         <Container fluid
@@ -37,7 +40,11 @@ function Header() {
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link title="Login">
-                    <Link to="/Login" style={{color:"white"}}>Login</Link>
+                      {
+                        isLoggedIn() ?
+                        <Link onClick={logout} style={{color:"white"}}>Logout</Link> :
+                        <Link to='login' style={{color:"white"}}>Login</Link>
+                      }                    
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
@@ -54,10 +61,19 @@ function Header() {
                   <Nav.Link>
                   <Link to="/UserInterface" style={{color:"white"}}>Dev</Link>
                   </Nav.Link>
-                </Nav.Item>
+                  </Nav.Item>
+                  <Nav.Item>
+                  <Nav.Link>
+                  <Link to="/admin" style={{color:"white"}}>Admin</Link>
+                  </Nav.Link>
+                  </Nav.Item>
+                
               </Nav>
             </Col>    
   </Row>  
+  <Row>
+  {/* <Navigation /> */}
+  </Row>
 </Container>                
         
     );
