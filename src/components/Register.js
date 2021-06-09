@@ -73,7 +73,7 @@ const Register = () => {
                 
                                 <Form>
                                     <Form.Group controlId="formBasicEmail">
-                                        <Form.Label>Enter your E-Mail adress (working)</Form.Label>
+                                        <Form.Label>Enter your E-Mail adress</Form.Label>
                                         <Form.Control 
                                         type="text" 
                                         placeholder="Enter email"
@@ -81,6 +81,16 @@ const Register = () => {
                                         onChange={handleChange} 
                                         style={{ width: '20rem' }}
                                         />
+                                    </Form.Group>
+
+                                    <Form.Group controlId="formBasicPassword">
+                                        <Form.Label>Choose a Username</Form.Label>
+                                        <Form.Control 
+                                        type="text" 
+                                        placeholder="Username"
+                                        name="username"
+                                        onChange={handleChange} 
+                                        style={{ width: '20rem' }}/>
                                     </Form.Group>
 
                                     <Form.Group controlId="formBasicPassword">
@@ -97,8 +107,9 @@ const Register = () => {
                                         <Form.Label>Confirm Password</Form.Label>
                                         <Form.Control type="password" placeholder="Password" style={{ width: '20rem' }}/>
                                     </Form.Group>
+                                   
 
-                                    <Button variant="primary" type="submit" onClick={() => register(formData)}>
+                                    <Button variant="primary" onClick={() => register(formData)}>
                                         Proceed
                                     </Button>
                                 </Form>
@@ -144,5 +155,31 @@ const Register = () => {
         </Tabs>        
     )
 }
+
+
+// Below: Tryout org code delete later --------------
+{/* <>
+      <input
+        type="text"
+        placeholder="email"
+        name="email"
+        onChange={handleChange}
+      />
+      <input
+        type="text"
+        placeholder="username"
+        name="username"
+        onChange={handleChange}
+      />
+      <input
+        type="password"
+        placeholder="password"
+        name="password"
+        onChange={handleChange}
+      />
+      <button onClick={() => register(formData)}>Register</button>
+    </>
+  )
+} */}
 
 export default Register

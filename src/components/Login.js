@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card'
 import { Redirect } from 'react-router-dom';
 import { AuthContext } from '../AuthContext';
 import useFormData from '../useFormData';
+import { Link } from 'react-router-dom';
 
 const initialFormData = {
     email: '',
@@ -62,7 +63,7 @@ const initialFormData = {
                                     </Button>
                                     
                                     <Button variant="primary" type="submit">
-                                        Register
+                                        <Link to="/Register" style={{color:"white"}}>Register</Link>
                                     </Button>
                                 </Form>
 
