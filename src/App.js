@@ -21,7 +21,10 @@ import AreaBoot from './components/AreaBoot'
 import RegisterDev from './components/RegisterDev'
 import RegisterComp from './components/RegisterComp'
 import RegisterBoot from './components/RegisterBoot'
-
+import BlogSingle from './components/BlogSingle'
+import BlogSingleOne from './components/BlogSingleOne'
+import BlogSingleTwo from './components/BlogSingleTwo'
+import BlogSingleThree from './components/BlogSingleThree'
 
 
 
@@ -57,6 +60,18 @@ function App() {
             </Route>
             <Route exact path="/Blog">
              <Blog />
+            </Route>
+            <Route exact path="/BlogSingle">
+             <BlogSingle />
+            </Route>
+            <Route exact path="/BlogSingleOne">
+             <BlogSingleOne />
+            </Route>
+            <Route exact path="/BlogSingleTwo">
+             <BlogSingleTwo />
+            </Route>
+            <Route exact path="/BlogSingleThree">
+             <BlogSingleThree />
             </Route>
             <Route exact path="/AreaDev">
              <AreaDev />
