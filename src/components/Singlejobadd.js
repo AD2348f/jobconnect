@@ -19,7 +19,7 @@ const Singlejobadd = () => {
 const { id } = useParams();
 
 const [jobadd, setJobAdd] = useState([]);
-const [loader, setLoader] = useState(false);
+const [loader, setLoader] = useState(true);
 const url = "https://jobconnect-try.herokuapp.com/jobadds";
 
 useEffect(() => { fetchJobAdd();
@@ -29,8 +29,8 @@ const fetchJobAdd = async() => {
     setLoader(true);
     await Axios.get(`${url}/${id}`)
     .then((response) => setJobAdd(response.data.data))
-    .catch((error) => console.log(error));
-    setLoader(false)
+    .catch((error) => console.log(error))
+    .finally(()=>setLoader(false))    
 }   
 
 // const date = new Date(jobadd.addDate);
@@ -38,7 +38,7 @@ const fetchJobAdd = async() => {
 // const formattedDate = format (date, "yyyy-MM-dd");
 
 console.log(jobadd)
-  return (
+  return !loader && (
     <div className="App__Singleoffer">                  
       <Card key={jobadd._id} style={{ width: '90rem' }} className="mt-5" md="auto">
           <Card.Body>
@@ -69,7 +69,8 @@ console.log(jobadd)
                 </Row>
               </Container>
             </Card.Subtitle>
-            <Card.Text>            
+            <Card.Text>
+                      
             <Card.Text class="font-weight-bold">Our company:</Card.Text>            
             {jobadd.addFull[0]} 
             <br /><br />
@@ -82,6 +83,7 @@ console.log(jobadd)
             <Card.Text class="font-weight-bold">We offer:</Card.Text>                           
             {jobadd.addFull[1]}
             <br /><br /> 
+
             </Card.Text>
             <Card.Text class="font-weight-bold">
               Techstack: {jobadd.addTech}
