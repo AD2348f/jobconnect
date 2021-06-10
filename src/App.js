@@ -44,18 +44,12 @@ function App() {
 
   return (
     <>
-    
     <div className="App">
-
       <Header />  
       <Container className="mx-auto" >
-  <Row className="mx-auto">    
-  
-        
-
+  <Row className="mx-auto">  
   </Row>  
   <Row className="justify-content-md-center">
-   
         <Switch>
             <ProtectedRoute path="/AreaDev" component={AreaDev} />   
             <ProtectedRoute path="/AreaComp" component={AreaComp} /> 

@@ -76,7 +76,7 @@ function Header() {
                       {
                         isLoggedIn() ?
                         <Link onClick={logout} style={{color:"white"}}>Logout</Link> :
-                        <Link to='login' style={{color:"white"}}>Login</Link>
+                        <Link to='/login' style={{color:"white"}}>Login</Link>
                       }                    
                     </Nav.Link>
                   </Nav.Item>                  

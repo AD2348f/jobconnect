@@ -14,11 +14,10 @@ const LandingPage = ({input:keyword, onChange:setKeyword, onKeyDown}) => {
     return (
         <div className="my-3" >          
       <Container className="justify-content-md-center mb-3">   
-        <Row className="my-3">
-          <Col></Col>
-          <Col>
+        <Row className="justify-content-md-center mb-3 my-3">          
+          <Col md-4>
             {/* <SearchBar /> */}
-            <InputGroup className="mb-3">
+            {/* <InputGroup className="mb-3">
               <Form.Control
                 placeholder="search Jobs"
                 aria-label="Recipient's username"
@@ -28,16 +27,14 @@ const LandingPage = ({input:keyword, onChange:setKeyword, onKeyDown}) => {
                 // onChange={(e) => setKeyword(e.target.value)}
                 onKeyDown={onKeyDown}
               />    
-            </InputGroup>
+            </InputGroup> */}
           </Col>
-          <Col>
-            <Button variant="outline-secondary" id="button-addon2" >
-            <Link to="/search"style={{color:"black"}}>Search</Link>
-            </Button>
-            <Button variant="outline-secondary" id="button-addon2">
-              X
-            </Button>
+          <Col md-4>
+            <Button variant="outline-secondary" id="button-addon2" style={{width: '15rem' }} >
+            <Link to="/search" style={{color:"black" }}>Start your job search</Link>
+            </Button>            
           </Col>          
+          <Col md-4></Col>
         </Row>      
         <Row className="justify-content-md-center">
         {/* <SidebarLeft />         */}          
@@ -53,13 +50,17 @@ const LandingPage = ({input:keyword, onChange:setKeyword, onKeyDown}) => {
             </Card.Body>
           </Card> 
         </Row>   
-        <Container className="justify-content-md-center mb-3">
-          <Card style={{ width: '20rem' }} >
+        <Row className="justify-content-md-center mb-3">
+          <Col></Col>
+          <Col>
+          <Card style={{ width: '15rem' }} >
             <Card.Body>
-              <Card.Title>Recently added positions</Card.Title>
+              <Card.Title className="justify-content-md-center mb-3">Recently added positions</Card.Title>
             </Card.Body>
           </Card>  
-        </Container>
+          </Col>
+          <Col></Col>
+        </Row>
         <Row>
           <Col>
             <Card style={{ width: '18rem' }}>
