@@ -7,6 +7,7 @@ import { Redirect } from 'react-router-dom';
 import { AuthContext } from '../AuthContext';
 import useFormData from '../useFormData';
 import { Link } from 'react-router-dom';
+import '../css/HeightContainer.css'
 
 const initialFormData = {
     email: '',
@@ -21,7 +22,7 @@ const initialFormData = {
 
     return (      
           
-
+            <div className="all-height">
                 <Card style={{ width: '60rem' }} className="align-items-center mt-5 mb-5">
                     <Card.Body>
                     <Card.Title>Login to Your Area</Card.Title>
@@ -71,6 +72,7 @@ const initialFormData = {
                         </Nav>          
                     </Card.Body>
                 </Card>  
+                </div>
     )
 }
 

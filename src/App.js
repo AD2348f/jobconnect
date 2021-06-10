@@ -40,7 +40,7 @@ function App() {
   return (
     <div className="App">
       <Header />  
-      <Container className="mx-auto">
+      <Container className="mx-auto" >
   <Row className="mx-auto">    
   
         
@@ -121,7 +121,7 @@ function App() {
       </Row>
       </Container>  
       <Footer />               
-    </div>       
+    </div>    
   );
 }
 export default App;

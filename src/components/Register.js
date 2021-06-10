@@ -9,6 +9,7 @@ import Tab from 'react-bootstrap/Tab'
 import { useHistory } from 'react-router-dom';
 import useFormData from '../useFormData';
 import { AuthContext } from '../AuthContext';
+import '../css/HeightContainer.css'
 
 const initialFormData = {
     email: '',
@@ -31,6 +32,7 @@ const Register = () => {
 
     return (        
 
+        <div className="all-height">
         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="align-items-center mt-5">
             <Tab eventKey="home" title="Companies" className="mb-5">
                 <Card style={{ width: '60rem' }} className="align-items-center mb-5">
@@ -152,7 +154,8 @@ const Register = () => {
                     </Card.Body>
                 </Card>  
             </Tab>
-        </Tabs>        
+        </Tabs> 
+    </div>       
     )
 }
 
