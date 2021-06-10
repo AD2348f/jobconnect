@@ -4,12 +4,13 @@ import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
+import '../css/HeightContainer.css'
 
 
 const AboutUs = () => {
     return (
-        <div>
-            <Container>
+        <div className="all-height">
+            <Container className="mt-5">
   <Row>
     <Col xs={6} md={4}>
       <Image src="holder.js/171x180" rounded />

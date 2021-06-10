@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
+import '../css/HeightContainer.css'
 
 
 
@@ -19,7 +20,9 @@ function RegisterBoot() {
     };
   
     return (
-        <Form noValidate validated={validated} onSubmit={handleSubmit}>
+
+      <div className="all-height">
+        <Form noValidate validated={validated} onSubmit={handleSubmit} className="mt-5">
         
           <Form.Group as={Col}  controlId="validationCustom01">
             <Form.Label>Name of Your Coding School</Form.Label>
@@ -83,6 +86,7 @@ function RegisterBoot() {
         </Form.Group>
         <Button type="submit">Register</Button>
       </Form>
+    </div>
     );
   }
   

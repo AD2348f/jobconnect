@@ -6,6 +6,8 @@ import Container from 'react-bootstrap/Container';
 import NoResult from './Noresult';
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
+import '../css/HeightContainer.css'
+
 
 const SearchPage = () => {
   const [input, setInput] = useState(''); 
@@ -54,7 +56,7 @@ const onKeyDown = (e) => {
   },[]);
 	
   return (
-    <>  
+    <div className="all-height">  
       <Container className="justify-content-md-center">   
         <Row className="my-3">
           <Col></Col>
@@ -81,7 +83,7 @@ const onKeyDown = (e) => {
           
         </Row>
       </Container>
-    </>
+    </div>
    );
 }
 

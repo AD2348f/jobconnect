@@ -2,9 +2,13 @@
   text-align: center; 
     max-width: 100%;
     overflow-x: hidden;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-div {
+/* div {
   border: solid 0.1rem black;
 }
 
@@ -27,7 +31,7 @@ div {
 
 
 /* Header Section */
-.App__Header {
+/* .App__Header {
   display: flex;
   justify-content: space-around;
   background-color: chartreuse;
@@ -41,37 +45,37 @@ div {
 
 .App__Navigation li {
   margin: 1rem;
-} 
+}  */
 
 /* Main Section */
-.App__Main--wrapper {
+/* .App__Main--wrapper {
   display: flex;
   justify-content: space-around;
   margin-top: 5rem;
   margin-bottom: 10rem;  
-}
+} */
 
-.App__Sidebar-links {
+/* .App__Sidebar-links { */
   /* margin-left: 10rem; */
-  min-width: 20rem;
+  /* min-width: 20rem;
   
-}
+} */
 
-.App__Mittelteil {
+/* .App__Mittelteil {
   min-width: 70rem;
   margin-right: 30rem;
   margin-left: 5rem;
-}
-
+} */
+/* 
 .App__Suchfelder-wrapper {
   display: flex;
-}
+} */
 
 
 /* Footer Section */
 
-footer {
+/* footer {
   display: flex;
   justify-content: space-around;
   background-color: chocolate;
-}
+} */ 

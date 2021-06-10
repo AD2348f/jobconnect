@@ -46,12 +46,13 @@ function App() {
     <>
     
     <div className="App">
-      <Header  />  
-      <Container className="mx-auto">
-  <Row className="mx-auto">  
-     
-    {/* <div>Testtexthier: {users.username} </div>  */}
-    {/* {[name.role]}  */}
+
+      <Header />  
+      <Container className="mx-auto" >
+  <Row className="mx-auto">    
+  
+        
+
   </Row>  
   <Row className="justify-content-md-center">
    
@@ -129,8 +130,10 @@ function App() {
       </Row>
       </Container>  
       <Footer />               
+
     </div>     
     </>     
+
   );
 }
 export default App;

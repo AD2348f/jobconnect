@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 
 const LandingPage = ({input:keyword, onChange:setKeyword, onKeyDown}) => {
     return (
-        <div className="my-3">          
+        <div className="my-3" >          
       <Container className="justify-content-md-center mb-3">   
         <Row className="my-3">
           <Col></Col>
@@ -45,23 +45,30 @@ const LandingPage = ({input:keyword, onChange:setKeyword, onKeyDown}) => {
         <Row className="my-3">
           <Card style={{ width: '90rem' }}>
             <Card.Body>
-              <Card.Title>LandingPage</Card.Title>
-              <Card.Subtitle className="mb-2 text-muted ">Welcome</Card.Subtitle>
+              <Card.Title>BootCampers, welcome to the party!</Card.Title>
+              <Card.Subtitle className="mb-2 text-muted ">Lookin' for Your first Job after surviving the BootCamp?</Card.Subtitle>
               <Card.Text>
-                Find your first coding Job
+                We provide You with everything You need as a career shifter in Your first Tech Environment.
               </Card.Text>
             </Card.Body>
           </Card> 
-        </Row>        
+        </Row>   
+        <Container className="justify-content-md-center mb-3">
+          <Card style={{ width: '20rem' }} >
+            <Card.Body>
+              <Card.Title>Recently added positions</Card.Title>
+            </Card.Body>
+          </Card>  
+        </Container>
         <Row>
           <Col>
             <Card style={{ width: '18rem' }}>
               <Card.Body>
-                <Card.Title>Something Interesting</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                <Card.Title>Junior Frontend Developer</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">Philipps-Universität Marburg</Card.Subtitle>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up the bulk of
-                  the card's content.
+                  Become part of our small team in a friendly, academic environment.
+                  You will work with React, CSS, HTML and JavaScript...
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -69,11 +76,11 @@ const LandingPage = ({input:keyword, onChange:setKeyword, onKeyDown}) => {
           <Col>
             <Card style={{ width: '18rem' }}>
               <Card.Body>
-                <Card.Title>Something Interesting</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                <Card.Title>Junior Backend Developer</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">Miele u. Cie.KG</Card.Subtitle>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up the bulk of
-                  the card's content.
+                  We need support for our backend team immediately!
+                  If you know MySQL, Python and or JavaScript: Welcome on board!
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -81,11 +88,11 @@ const LandingPage = ({input:keyword, onChange:setKeyword, onKeyDown}) => {
           <Col>
             <Card style={{ width: '18rem' }}>
               <Card.Body>
-                <Card.Title>Something Interesting</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                <Card.Title>Developer in Tourist Management</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">Marco Polo GmbH</Card.Subtitle>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up the bulk of
-                  the card's content.
+                  Need a new Challenge? Then this might be for You! We are looking for a tourist manager who also knows how to
+                  use programming to help us out with our new project...
                 </Card.Text>
               </Card.Body>
             </Card>

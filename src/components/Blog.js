@@ -1,33 +1,33 @@
 import { Link } from 'react-router-dom';
 import React from "react";
-// import useApi from '../hooks/useApi';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form'
 import Pagination from 'react-bootstrap/Pagination'
+import '../css/HeightContainer.css'
+import blog from '../pictures/blog_banner1.jpg'
+import blogTwo from '../pictures/blog_banner2.jpg'
 
 
 const Blog = () => {
  
-// const [jobadds] = useApi();
   return (
   
-    // // <div className='App'>
-      
-    //     {/* {jobadds.map((jobadd) => ( */}
-    //       {/* key={jobadd._id} */}
-
+        <div className="all-height">
           <Form style={{ width: '90rem' }} className="m-3">
             <Card  style={{ width: '90rem' }} className="m-3">
               <Card.Body >
-                <Card.Title>Blogpost</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted m-3">Subtitle</Card.Subtitle>
-                <img src="http://via.placeholder.com/640x360"></img>
+                <Card.Title>Why Everyone Should Learn To Code</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted m-3">- published by Ella Patenall</Card.Subtitle>
+                <img src={blog} className="blog"></img>
                   
                 <Card.Text className="my-3">
-                TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-                TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-                TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText   
-                TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
+                There’s no denying that technology now dominates a huge amount of different industries. 
+                Being computer illiterate just won’t cut it any more in the world of work.
+                <br></br>
+                And ‘learning to code’ seems to be the buzzword at the moment. 
+                And everyone from Bill Gates to Obama is encouraging young people to give it a go.
+                <br></br>
+                But what exactly does learning to code entail? And why is it so important? Read on to find out.
                 </Card.Text>    
                 <Card.Text>
                 #Hashtag
@@ -39,15 +39,16 @@ const Blog = () => {
 
             <Card  style={{ width: '90rem' }} className="m-3">
               <Card.Body >
-                <Card.Title>Blogpost</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted m-3">Subtitle</Card.Subtitle>
-                <img src="http://via.placeholder.com/640x360"></img>
+                <Card.Title>What To Study For Careers In New Technologies</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted m-3">By Laura T</Card.Subtitle>
+                <img src={blogTwo} className="blog"></img>
                   
                 <Card.Text className="my-3">
-                TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-                TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-                TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText   
-                TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
+                STEM subjects are prime fields to study if you like the idea of building a career based around an exciting new technology, and a degree in any STEM subject 
+                (science, technology, engineering and mathematics) can be the first step towards making a contribution to the next stage of technological innovation.
+                <br></br>
+                Perhaps you’d like to specialize in robotics engineering, nanoscience and nanotechnology, 3D printing, or maybe you want to earn a cyber security degree. 
+                Whichever area of new technology you’re interested in, read on to discover what you can expect from each specialization and how studying STEM subjects can lead on to careers in each area.
                 </Card.Text>    
                 <Card.Text>
                 #Hashtag
@@ -112,9 +113,7 @@ const Blog = () => {
             </Pagination>
 
           </Form>
-
-          // {/* ))}    */}
-    // </div>
+    </div>
   );
  };
 
