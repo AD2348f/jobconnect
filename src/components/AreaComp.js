@@ -1,4 +1,4 @@
-import React, {useEffect, useContext} from 'react'
+import React, { useState, useEffect, useContext} from 'react'
 import Card from 'react-bootstrap/Card'
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
@@ -9,11 +9,15 @@ import axios from 'axios'
 import {AuthContext} from '../AuthContext'
 
 
+
+
 const AreaComp = () => {
     const {authToken} = useContext(AuthContext)
+    const [me, setMe] = useState([]);
 
     useEffect(() => {
-        axios.get('https://jobconnect-try.herokuapp.com/auth/me',{headers:{Authorization: `Bearer ${authToken}`}}).then(res => console.log(res)) 
+        axios.get('https://jobconnect-try.herokuapp.com/auth/me',{headers:{Authorization: `Bearer ${authToken}`}})
+        .then(res => setMe(res.data.data)) 
     },[])
 
     return (
@@ -28,14 +32,15 @@ const AreaComp = () => {
             </Card.Body>
         </Card>
 
-        <Card className="bg-dark text-white mb-5">
+        <Card className="bg-dark text-white mb-5">            
         <Card.Body>
+        
         <Image src="http://via.placeholder.com/640x360"  />
         {/* <img src="http://via.placeholder.com/640x360"></img> */}
             <Card.ImgOverlay>
                 <Card.Title>We design the Future</Card.Title>
                     <Card.Text>
-                        Look at our awesome stuff that we build. Be a Part of it!
+                        Look at our awesome stuff that we build. Be a Part of it!                        
                     </Card.Text>
             </Card.ImgOverlay>
             </Card.Body>
@@ -43,7 +48,8 @@ const AreaComp = () => {
 
         <Card>
             <Card.Body>
-                    <Card.Title>All Your base are belong to us!</Card.Title>
+            <h1>{me.username} {me.role}</h1>
+                    <Card.Title> All Your base are belong to us!</Card.Title>
                         <Card.Text>
                         TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
                         TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText

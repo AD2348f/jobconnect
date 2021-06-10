@@ -16,7 +16,8 @@ const initialFormData = {
   benefitsDesc: '',
   companyDesc: '',
   tasksDesc: '',
-  requirementsDesc: ''
+  requirementsDesc: '',
+  addComp: '60b8a22f854dcfc6c66a0306'
 };
 
 const CreateAdd = () => {
@@ -34,7 +35,8 @@ const CreateAdd = () => {
       benefitsDesc,
       companyDesc,
       tasksDesc,
-      requirementsDesc
+      requirementsDesc,
+      addComp
     } = formData;
 
     const newAd = {
@@ -44,6 +46,7 @@ const CreateAdd = () => {
       addContr,
       addWrkt,
       addTech,
+      addComp,
       addFull: [
         benefitsDesc,
         companyDesc,

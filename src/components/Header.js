@@ -1,5 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../AuthContext';
+
 import { Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav'
 import logo from '../pictures/logo_small.png'
@@ -9,14 +10,46 @@ import Col from 'react-bootstrap/Col'
 
 
 
-function Header() { 
-  const { isLoggedIn, logout } = useContext(AuthContext);
+function Header() {
+  const { isLoggedIn, me, logout } = useContext(AuthContext);
+  const { testswitch, setTestswitch} = useState(false);
+
+  const getProfileLink = () => {
+      switch(me.role) {
+        case 'Company':
+          return (
+            <Nav.Item>
+              <Nav.Link title="AreaComp">
+                <Link to="/AreaComp" style={{color:"white"}}>Company</Link>
+              </Nav.Link>
+            </Nav.Item>
+          )
+        case 'Developer':
+          return (
+            <Nav.Item>
+              <Nav.Link title="AreaDev">
+                <Link to="/AreaDev" style={{color:"white"}}>Dev</Link>
+              </Nav.Link>
+            </Nav.Item>          
+          )
+        default: 
+          return (
+            <Nav.Item>
+              <Nav.Link title="AreaBoot">
+                <Link to="/AreaBoot" style={{color:"white"}}>BootCamps</Link>
+              </Nav.Link>
+            </Nav.Item>
+          )
+      }
+  }
+
     return (      
       
         <Container fluid
         style={{backgroundColor: "blue"}}
         >
           <Row>
+          
             <Col>
             <img src={logo} className="logo"></img>
             </Col>
@@ -59,29 +92,14 @@ function Header() {
                     <Link to="/Blog" style={{color:"white"}}>Blog</Link>
                     </Nav.Link>
                   </Nav.Item>
-                  <Nav.Item>
+                  {/* <Nav.Item>
                     <Nav.Link>
                     <Link to="/User" style={{color:"white"}}>User</Link>
                     </Nav.Link>
-                  </Nav.Item>
+                  </Nav.Item> */}
                   {
-                    isLoggedIn() ?                    
-                    <Nav.Item><Nav.Link title="AreaDev">
-                      <Link to="/AreaDev" style={{color:"white"}}>Dev</Link>
-                    </Nav.Link>
-                  </Nav.Item> : ""}
-                  {
-                    isLoggedIn() ?                    
-                    <Nav.Item><Nav.Link title="AreaComp">
-                      <Link to="/AreaComp" style={{color:"white"}}>Company</Link>
-                    </Nav.Link>
-                  </Nav.Item> : ""}
-                  {
-                    isLoggedIn() ?                    
-                    <Nav.Item><Nav.Link title="AreaBoot">
-                      <Link to="/AreaBoot" style={{color:"white"}}>BootCamps</Link>
-                    </Nav.Link>
-                  </Nav.Item> : ""}                  
+                    isLoggedIn() && getProfileLink()
+                  }                  
               </Nav>
             </Col>    
   </Row>    

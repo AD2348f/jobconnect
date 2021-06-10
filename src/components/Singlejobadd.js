@@ -37,7 +37,7 @@ const fetchJobAdd = async() => {
 
 // const formattedDate = format (date, "yyyy-MM-dd");
 
-
+console.log(jobadd)
   return (
     <div className="App__Singleoffer">                  
       <Card key={jobadd._id} style={{ width: '90rem' }} className="mt-5">
@@ -58,7 +58,7 @@ const fetchJobAdd = async() => {
                 <Icon.Calendar /> Posted on: {moment(jobadd.addDate).format('MMMM Do YYYY, h:mm a')}   
                 </Col> 
                 <Col>
-                  <Icon.Building /> Company: {jobadd.addComp} 
+                  <Icon.Building /> Company: {jobadd.addComp?.name} 
                 </Col>
                 <Col md="auto">                 
                   <Icon.Clock /> Workingtime: {jobadd.addWrkt}

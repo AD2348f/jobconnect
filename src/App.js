@@ -15,6 +15,7 @@ import LandingPage from './components/LandingPage'
 import User from './components/User'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
+import useLogin from './hooks/useLogin'
 
 import Col from 'react-bootstrap/Col'
 import AreaDev from './components/AreaDev'
@@ -32,21 +33,28 @@ import BlogSingleThree from './components/BlogSingleThree'
 
 import ProtectedRoute from './components/ProtectedRoute'
 
-
+import useUsers from './hooks/useUsers';
 
 
 
 function App() {  
+  //const name = useLogin();
+  const [users, setUster] = useUsers([]);
+
+
   return (
+    <>
+    
     <div className="App">
-      <Header />  
+      <Header  />  
       <Container className="mx-auto">
-  <Row className="mx-auto">    
-  
-        
+  <Row className="mx-auto">  
+     
+    {/* <div>Testtexthier: {users.username} </div>  */}
+    {/* {[name.role]}  */}
   </Row>  
   <Row className="justify-content-md-center">
-  
+   
         <Switch>
             <ProtectedRoute path="/AreaDev" component={AreaDev} />   
             <ProtectedRoute path="/AreaComp" component={AreaComp} /> 
@@ -121,7 +129,8 @@ function App() {
       </Row>
       </Container>  
       <Footer />               
-    </div>       
+    </div>     
+    </>     
   );
 }
 export default App;

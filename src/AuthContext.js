@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import cookies from 'js-cookie';
 import axios from 'axios';
 
@@ -9,13 +9,27 @@ const API_URL = 'https://jobconnect-try.herokuapp.com/auth';
 
 const AuthContextProvider = ({ children }) => {
   const userToken = cookies.get('token');
+  const [me, setMe] = useState({});
   const [authToken, setAuthToken] = useState(userToken);
   const [error, setError] = useState(false);
 
-  console.log(authToken)
+  /*useEffect(() => {
+    if (userToken)  fetchLogin()
+  }, []);*/
+
+  useEffect(() => {
+    if (authToken)  fetchLogin()
+  }, [authToken]);
+
   const isLoggedIn = () => {
     return authToken ? true : false;
   }
+
+  const fetchLogin = async() => {
+    await axios.get(`${API_URL}/me`,{headers:{Authorization: `Bearer ${authToken}`}})
+    .then((response) => setMe(response.data.data))
+    .catch((error) => console.log(error));
+  }  
 
   const setCookieOrError = (res) => {
     const { status, data } = res;
@@ -55,7 +69,8 @@ const AuthContextProvider = ({ children }) => {
         isLoggedIn,
         login,
         register,
-        logout
+        logout,
+        me
       }}
     >
       { children }

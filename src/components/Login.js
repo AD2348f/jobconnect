@@ -55,7 +55,6 @@ const initialFormData = {
 
                                     <Button 
                                     variant="primary" 
-                                    type="submit" 
                                     className="m-3"
                                     onClick={() => login(formData)}
                                     >
