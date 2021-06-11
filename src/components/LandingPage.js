@@ -89,11 +89,11 @@ const LandingPage = ({input:keyword, onChange:setKeyword, onKeyDown}) => {
           <Col>
             <Card style={{ width: '18rem' }}>
               <Card.Body>
-                <Card.Title>Developer in Tourist Management</Card.Title>
+                <Card.Title>Developer</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">Marco Polo GmbH</Card.Subtitle>
                 <Card.Text>
-                  Need a new Challenge? Then this might be for You! We are looking for a tourist manager who also knows how to
-                  use programming to help us out with our new project...
+                  Need a new Challenge? Then this might be for You! 
+                  We are looking for a tourist manager who also knows... 
                 </Card.Text>
               </Card.Body>
             </Card>
