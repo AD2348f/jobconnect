@@ -14,7 +14,7 @@ const BlogSingle = () => {
             <Card style={{ width: '90rem' }} className="m-3">
                 <Card.Body >
                     <Card.Title>Why Everyone Should Learn To Code</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted m-3">- published by Ella Patenall</Card.Subtitle>
+                    <Card.Subtitle className="mb-2 text-muted m-3">By Ella Patenall</Card.Subtitle>
                     <img src={blog} className="blog"></img>
                     
                     <Card.Text className="my-3">

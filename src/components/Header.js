@@ -3,7 +3,7 @@ import { AuthContext } from '../AuthContext';
 
 import { Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav'
-import logo from '../pictures/logo_small.png'
+import logo from '../pictures/chip1.png'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'

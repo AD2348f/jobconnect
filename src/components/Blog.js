@@ -6,6 +6,8 @@ import Pagination from 'react-bootstrap/Pagination'
 import '../css/HeightContainer.css'
 import blog from '../pictures/blog_banner1.jpg'
 import blogTwo from '../pictures/blog_banner2.jpg'
+import blogThree from '../pictures/blog_banner3.jpg'
+import blogFour from '../pictures/blog_banner4.jpg'
 
 
 const Blog = () => {
@@ -17,7 +19,7 @@ const Blog = () => {
             <Card  style={{ width: '90rem' }} className="m-3">
               <Card.Body >
                 <Card.Title>Why Everyone Should Learn To Code</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted m-3">- published by Ella Patenall</Card.Subtitle>
+                <Card.Subtitle className="mb-2 text-muted m-3">By Ella Patenall</Card.Subtitle>
                 <img src={blog} className="blog"></img>
                   
                 <Card.Text className="my-3">
@@ -59,15 +61,14 @@ const Blog = () => {
 
             <Card  style={{ width: '90rem' }} className="m-3">
               <Card.Body >
-                <Card.Title>Blogpost</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted m-3">Subtitle</Card.Subtitle>
-                <img src="http://via.placeholder.com/640x360"></img>
+                <Card.Title>Top 5 Tech Careers Of The Future</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted m-3">By Stephanie L</Card.Subtitle>
+                <img src={blogThree} className="blog"></img>
                   
                 <Card.Text className="my-3">
-                TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-                TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-                TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText   
-                TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
+                Even before the coronavirus pandemic, technologies such as artificial intelligence (AI), machine learning, data analytics and cloud computing had been growing rapidly over the years (even decades). 
+                <br></br>
+                But in the short space of just seven months they have become essential in today’s society amid the current global health crisis.
                 </Card.Text>    
                 <Card.Text>
                 #Hashtag
@@ -78,15 +79,14 @@ const Blog = () => {
 
             <Card  style={{ width: '90rem' }} className="m-3">
               <Card.Body >
-                <Card.Title>Blogpost</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted m-3">Subtitle</Card.Subtitle>
-                <img src="http://via.placeholder.com/640x360"></img>
+                <Card.Title>How To Get Your First Job In Big Data</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted m-3">By Laura Bridgestock</Card.Subtitle>
+                <img src={blogFour} className="blog"></img>
                   
                 <Card.Text className="my-3">
-                TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-                TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-                TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText   
-                TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
+                Thanks to cloud computing, the rise in smartphone ownership and surge in demand for the “internet of things”,
+                <br></br> 
+                jobs in big data are expected to grow by 4.4 million by 2024, according to the US Bureau of Labor Statistics.
                 </Card.Text>    
                 <Card.Text>
                 #Hashtag
