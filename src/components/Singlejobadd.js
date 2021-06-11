@@ -75,10 +75,10 @@ console.log(jobadd)
             {jobadd.addFull[1]} 
             <br /><br />
             <Card.Text class="font-weight-bold">Your responsibilities:</Card.Text>  
-            {jobadd.addFull[3]}  
+            {jobadd.addFull[2]}  
             <br /><br />
             <Card.Text class="font-weight-bold">Your profile:</Card.Text>
-            {jobadd.addFull[2]}  
+            {jobadd.addFull[3]}  
             <br /><br />
             <Card.Text class="font-weight-bold">We offer:</Card.Text>                           
             {jobadd.addFull[0]}
