@@ -72,7 +72,7 @@ console.log(jobadd)
             <Card.Text>
                       
             <Card.Text class="font-weight-bold">Our company:</Card.Text>            
-            {jobadd.addFull[0]} 
+            {jobadd.addFull[1]} 
             <br /><br />
             <Card.Text class="font-weight-bold">Your responsibilities:</Card.Text>  
             {jobadd.addFull[2]}  
@@ -81,7 +81,7 @@ console.log(jobadd)
             {jobadd.addFull[3]}  
             <br /><br />
             <Card.Text class="font-weight-bold">We offer:</Card.Text>                           
-            {jobadd.addFull[1]}
+            {jobadd.addFull[0]}
             <br /><br /> 
 
             </Card.Text>
