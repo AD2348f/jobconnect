@@ -68,7 +68,7 @@ const Register = () => {
                 </Card>  
             </Tab>
 
-            <Tab eventKey="profile" title="Developers" className="mb-5">
+            <Tab eventKey="profile" title="Developeras" className="mb-5">
                 <Card style={{ width: '60rem' }} className="align-items-center">
                     <Card.Body>
                         <Nav variant="tabs" defaultActiveKey="/home" className="mb-3">
