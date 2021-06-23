@@ -14,7 +14,8 @@ import '../css/HeightContainer.css'
 const initialFormData = {
     email: '',
     password: '',
-    username: ''
+    username: '',
+    role: 'Company'
   }
 
 
