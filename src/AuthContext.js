@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export const AuthContext = createContext();
 
-const API_URL = 'http://localhost:5000/auth';
+const API_URL = 'https://jobconnect-try.herokuapp.com/auth';
 // https://jobconnect-try.herokuapp.com/auth
 
 const AuthContextProvider = ({ children }) => {
