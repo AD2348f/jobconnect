@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export const AuthContext = createContext();
 
-const API_URL = 'https://jobconnect-try.herokuapp.com/auth';
+const API_URL = 'http://localhost:5000/auth';
 // https://jobconnect-try.herokuapp.com/auth
 
 const AuthContextProvider = ({ children }) => {
@@ -50,9 +50,9 @@ const AuthContextProvider = ({ children }) => {
       .catch((err) => setError(true))
   }
 
-  const register = ({ username, password, email }) => {
+  const register = ({ username, password, email, role }) => {
     axios
-      .post(`${API_URL}/register`, { username, password, email })
+      .post(`${API_URL}/register`, { username, password, email, role })
       .then((res) => setCookieOrError(res))
       .catch((err) => setError(true))
   };
